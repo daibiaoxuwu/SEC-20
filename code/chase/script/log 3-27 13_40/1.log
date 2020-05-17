@@ -1,0 +1,9 @@
+using saved target 'sky'
+../../tools/sky/serialdump-linux -b115200 /dev/ttyUSB1
+flood: 7 10244
+flood: 8 11524
+flood: 9 12804
+flood: 10 14084
+flood: 11 15364
+ 15365 P 1.0 1 331936 3601155 107209 29586 0 13348 178528 1787649 57512 18646 0 7813 (radio 3.47% / 3.87% tx 2.72% / 2.92% listen 0.75% / 0.94%)
+flood: 12 16644

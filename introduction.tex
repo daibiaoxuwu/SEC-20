@@ -1,0 +1,47 @@
+\section{Introduction}
+\label{sec-introduction}
+
+% introduce LPL asynchronous duty cycle media access
+As already we are aware, smartphones have become a necessity in our lives, as we are checking our mobile phones constantly throughout the day. As a result, some concerns of privacy have arisen about nearby parties peeking at our screen, or ‘shoulder surfing’. Although great effort has been put forward to mitigate this threat, from physical privacy films to alternative password entry interfaces \cite{wiedenbeck2006design} \cite{papadopoulos2017illusionpin} and input methods \cite{kumar2007reducing}, these methods often require additional cost and/or effort \cite{Chun2019Keep} and are not widely implemented yet.
+
+On the other hand, many works in this area are built on a threat model of an attacker observing with his/hers naked eye, as they assume that the attacker is not malicious and merely take several peeks out of curiosity. However, it is the rare but malicious and prepared attacker that can do the most harm, and leave aside special equipment, if we only equip the observer with a smartphone, he/she can not only acquire sensitive information from long distances, reducing suspicion, but also record the information for propagating, dealing greater damage to the victim. For example, in a Senate hearing, the Justice Secretary of Philippines, Vitaliano Aguirre II, suffered a leakage of his text messages, as someone had taken a snapshot of his smartphone \cite{Polotiko2017leakage}. Moreover, smartphone cameras have seen great improvement these years, and as a highly-accessible ‘extension of the eye’, it is possible that ‘shoulder surfers’ peek at others’ screen through their smartphone lenses to obtain critical information like passwords or private e-mails. What’s more, recent developments in the field of super resolution (SR) pose a greater threat to smartphone privacy. Attackers can take multiple snapshots of the victim’s screen and process them with multiple image super resolution algorithms in real time, making them able to see clearly while keeping a longer distance. However, most SR methods are designed for and trained on naturally taken images \cite{nasrollahi2020deep} \cite{lyn2020image}; few works have focused on reconstructing blurry snapshots taken at extreme distances, and a new architecture needs to be designed.
+
+To explore this rarely studied privacy threat of the attacker looking through a smartphone camera, we have developed a holistic system for shoulder surfing. The fictional attacker captures multiple images of the victim’s screen in burst mode from his smartphone, and enhances its resolution with our multi-frame super resolution neural network. The network is designed and trained for this purpose, targeting several blurry images taken in quick succession of a screen at a distance. As the information of interest is mostly displayed on screen in the form of text (e.g. passwords or e-mails), our network focuses on reconstructing text, specifically, Chinese characters, English letters, and numbers. The system is deployed on a smartphone for demonstration, capturing and processing images at real time. Our system can also be used as a preprocessor for text-recognition applications when multiple images are available, such as real-time translation apps on a smartphone or text-recognition of video clips.
+
+\subsection{Difficulties}
+There are several difficulties unique to this SR application. The most prominent one is the blurriness, as our photos are taken at extreme range, taken secretly and hurriedly without much room for focusing, while straining the magnification of the smartphone lenses. Unlike most SR applications and datasets working with ‘normally’ captured photos, the images we face exhibit lower concentrations of information and more artifacts, and needs more ‘reconstruction’ than ‘interpolation’.
+
+Another difficulty unique to our task is the subject—mainly, Chinese characters. Composed of multiple strokes, these characters are distributed discretely in image space, not known to other entities, e.g. faces and natural objects. In some cases, messing up a stroke will not impact its readability, and in other cases shortening or lengthening a stroke even slightly will lead to a different character, leading to misunderstandings. And unlike most SR applications working on similarity (between their output and the ‘ground truth’), our goal is readability, and the network architecture and training process must be engineered accordingly.
+ 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.48\textwidth]{pic/zeros}
+    \caption{ Fig 1. 4 photos of number ‘0’ on a screen at a distance of 1.5m, taken in quick succession from a still smartphone camera. Note how they exhibit different blurriness and display no consistency between neighboring frames.}
+	\label{fig-zeros}
+\end{figure}
+
+
+\subsection{Network Architecture} 
+ As mentioned above, reconstructing images with high degrees of blurriness requires a unique approach. Most works on multi-frame SR function on video clips \cite{lucas2019generative} or multiple snapshots \cite{wronski2019handheld}, however, our application is subtly different from the two. Our dilemma is as follows: on one hand, each one of the photos we are to process is blurred with a randomly different PSF kernel, which, because of the extreme blurriness, cannot be approximated as a constant, isotropic gaussian kernel, and thus lacking consistency between neighboring frames, meaning that they cannot be processed as a video clip(see Figure~\ref{fig-zeros} ); on the other hand, because of the low concentration of information, the blurred photos are similar to pieces of a jigsaw puzzle, each containing only fractions of information, and the only chance of recovering the ground truth is by comparing each photo against others. If processed by common procedures enhancing the resolution of a series of snapshots—processing each one separately and merging them afterwards, few useful information can be extracted from each one of the images, and merging them will not produce satisfactory results.
+
+Considering the unique challenges of our application, we believe that if these images are processed iteratively, alternating between the following two processes, our network will be able to solve this ‘jigsaw puzzle’:
+
+\begin{enumerate}
+  \item Every single image of the input collection will be processed solely (by several layers of CNN), with access of the output of step (2) of the last iteration;
+  \item The processed results will be merged (with weighted averaging methods) and distributed to each photo for the next iteration.
+\end{enumerate}
+
+This architecture is beneficial to our task. On one hand, the deep learning part is assigned to each single image, reducing computational complexity and parameter growth, while receiving a global view of all the images, renewed at each layer, thanks to the merging process; on the other hand, information can be shared horizontally with weighted averaging methods, meaning no consideration of sequential order and no reliance of consistency between neighboring frames. Thus, this architecture solves the dilemma mentioned above, and proves perfectly functional in our application.
+
+The details of our architecture will be discussed in section 4.
+
+This paper makes the following contributions:
+
+\begin{itemize}
+  \item	We propose SRPeek, a multi-frame SR neural network architecture aiming at reconstructing extremely blurred and defocused images. This model is not only functional in our scenario, as a shoulder-surfing threat model, but also can be used in text-recognition applications prior to recognition algorithms to increase accuracy.
+  \item	We design a threat model of shoulder-surfing, with the attacker armed with multi-frame SR algorithms and taking multiple photos (in burst mode) of the victim’s screen with a smartphone camera. To the best of our knowledge, we are the first to consider the presence of smartphone cameras and SR algorithms in shouler surfing senarios.
+  \item	We demonstrate the effect of this shoulder-surfing attack and prove that it poses a threat to screen privacy.
+\end{itemize}
+
+% describe the organization of the paper
+The rest of the paper is organized as follows. Section 2 describes the threat model of our  carefully studies the performance of state-of-the-art concurrent flooding. The detailed design of COFlood protocol is shown in Section~\ref{sec-design}. We show the implementation details and evaluation results in Section~\ref{sec-implementation-and-evaluation}. The related work is introduced in Section~\ref{sec-related-work}. Finally, we conclude our work in Section~\ref{sec-conclusion}.

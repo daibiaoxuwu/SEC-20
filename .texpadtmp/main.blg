@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/ZhichaoCao/Dropbox/!Academia/mobihoc 20/.texpadtmp/main.aux
+The style file: abbrv.bst
+Database file #1: ../main.bib
+Repeated entry---line 166 of file ../main.bib
+ : @inproceedings{citysee
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 242 of file ../main.bib
+ : @inproceedings{sleep
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 467 of file ../main.bib
+ : @article{zheng2016bulk
+ :                       ,
+I'm skipping whatever remains of this entry
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            600 strings with 7516 characters,
+and the built_in function-call counts, 7698 in all, are:
+= -- 662
+> -- 511
+< -- 0
++ -- 201
+- -- 178
+* -- 554
+:= -- 1327
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 155
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 285
+empty$ -- 596
+format.name$ -- 178
+if$ -- 1559
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 205
+preamble$ -- 1
+purify$ -- 133
+quote$ -- 0
+skip$ -- 158
+stack$ -- 0
+substring$ -- 254
+swap$ -- 37
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 88
+warning$ -- 0
+while$ -- 54
+width$ -- 24
+write$ -- 227
+(There were 3 error messages)

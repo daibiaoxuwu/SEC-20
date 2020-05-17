@@ -1,0 +1,43 @@
+average duty cycle 0.440710113411414
+count 40 average delay 1101.325 completion time 2258 total sender 23 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 9 MPD 50.1111111111111
+count 41 average delay 903.90243902439 completion time 1830 total sender 19 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 5 MPD 114.2
+count 39 average delay 431.641025641026 completion time 844 total sender 22 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 9 MPD 99
+count 39 average delay 527.74358974359 completion time 1376 total sender 17 tree sender 12 long link sender 0 delta ETD 0 shortcut sender 5 MPD 81.8
+count 41 average delay 702.024390243902 completion time 1688 total sender 19 tree sender 13 long link sender 0 delta ETD 0 shortcut sender 6 MPD 80.1666666666667
+count 41 average delay 842.19512195122 completion time 1677 total sender 19 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 5 MPD 125.4
+count 38 average delay 497.210526315789 completion time 1090 total sender 20 tree sender 12 long link sender 1 delta ETD 15 shortcut sender 7 MPD 82
+count 39 average delay 592.128205128205 completion time 1356 total sender 18 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 5 MPD 77.2
+count 38 average delay 843.447368421053 completion time 2008 total sender 19 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 6 MPD 61.3333333333333
+count 40 average delay 726.95 completion time 1559 total sender 24 tree sender 13 long link sender 0 delta ETD 0 shortcut sender 11 MPD 117.636363636364
+count 41 average delay 511.707317073171 completion time 981 total sender 18 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 4 MPD 92.25
+count 38 average delay 780.710526315789 completion time 1770 total sender 24 tree sender 13 long link sender 1 delta ETD 15 shortcut sender 10 MPD 106
+count 41 average delay 522.146341463415 completion time 1098 total sender 21 tree sender 13 long link sender 1 delta ETD 15 shortcut sender 7 MPD 94.2857142857143
+count 37 average delay 571.702702702703 completion time 1179 total sender 17 tree sender 11 long link sender 1 delta ETD 13 shortcut sender 5 MPD 111.2
+count 39 average delay 561.897435897436 completion time 923 total sender 21 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 7 MPD 101.714285714286
+count 41 average delay 601.658536585366 completion time 1220 total sender 21 tree sender 13 long link sender 2 delta ETD 12.5 shortcut sender 6 MPD 137.166666666667
+count 38 average delay 699.921052631579 completion time 1248 total sender 21 tree sender 12 long link sender 1 delta ETD 12 shortcut sender 8 MPD 97.25
+count 40 average delay 363859.8 completion time 391866 total sender 23 tree sender 14 long link sender 1 delta ETD 13 shortcut sender 8 MPD 86.25
+count 40 average delay 713.4 completion time 1598 total sender 18 tree sender 13 long link sender 2 delta ETD 13.5 shortcut sender 3 MPD 125.666666666667
+count 39 average delay 992.435897435897 completion time 2033 total sender 18 tree sender 13 long link sender 0 delta ETD 0 shortcut sender 5 MPD 69.6
+count 41 average delay 603.365853658537 completion time 1134 total sender 21 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 7 MPD 81.5714285714286
+count 41 average delay 921 completion time 1836 total sender 20 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 6 MPD 82.3333333333333
+count 41 average delay 614.463414634146 completion time 1438 total sender 19 tree sender 13 long link sender 2 delta ETD 14 shortcut sender 4 MPD 107
+count 41 average delay 645.390243902439 completion time 1385 total sender 20 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 6 MPD 77.1666666666667
+count 40 average delay 615 completion time 1423 total sender 22 tree sender 13 long link sender 2 delta ETD 13.5 shortcut sender 7 MPD 100.428571428571
+count 40 average delay 562.175 completion time 1262 total sender 22 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 9 MPD 52.7777777777778
+count 39 average delay 833.076923076923 completion time 1825 total sender 21 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 8 MPD 132.875
+count 39 average delay 617.384615384615 completion time 1225 total sender 20 tree sender 13 long link sender 2 delta ETD 13.5 shortcut sender 5 MPD 58.2
+count 41 average delay 622.317073170732 completion time 1400 total sender 21 tree sender 13 long link sender 2 delta ETD 14 shortcut sender 6 MPD 106
+count 41 average delay 1063.65853658537 completion time 2098 total sender 20 tree sender 13 long link sender 2 delta ETD 13.5 shortcut sender 5 MPD 83.4
+count 41 average delay 513.414634146341 completion time 1002 total sender 22 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 8 MPD 67.25
+count 41 average delay 802.292682926829 completion time 1584 total sender 21 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 7 MPD 103.571428571429
+count 39 average delay 919.974358974359 completion time 1874 total sender 16 tree sender 12 long link sender 1 delta ETD 13 shortcut sender 3 MPD 93
+count 41 average delay 745.19512195122 completion time 1327 total sender 23 tree sender 13 long link sender 1 delta ETD 12 shortcut sender 9 MPD 101.333333333333
+count 41 average delay 748.756097560976 completion time 1517 total sender 21 tree sender 13 long link sender 2 delta ETD 13.5 shortcut sender 6 MPD 41.8333333333333
+count 41 average delay 493.609756097561 completion time 1128 total sender 26 tree sender 13 long link sender 2 delta ETD 14 shortcut sender 11 MPD 69.8181818181818
+count 39 average delay 690.487179487179 completion time 1187 total sender 20 tree sender 12 long link sender 1 delta ETD 12 shortcut sender 7 MPD 81.1428571428571
+count 40 average delay 686.725 completion time 1179 total sender 19 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 5 MPD 120
+count 41 average delay 847.585365853659 completion time 1856 total sender 25 tree sender 13 long link sender 2 delta ETD 13 shortcut sender 10 MPD 62.6
+count 41 average delay 622.341463414634 completion time 1346 total sender 20 tree sender 13 long link sender 1 delta ETD 13 shortcut sender 6 MPD 125.333333333333
+1559
+9 11 15 38 539

@@ -1,0 +1,128 @@
+\begin{thebibliography}{10}
+
+\bibitem{chase}
+Z.~Cao, D.~Liu, J.~Wang, and X.~Zheng.
+\newblock Chase: Taming concurrent broadcast for flooding in asynchronous duty
+  cycle networks.
+\newblock {\em IEEE/ACM Transactions on Networking}, 2017.
+
+\bibitem{chase++}
+Z.~Cao, J.~Wang, D.~Liu, X.~Miao, Q.~Ma, and X.~Mao.
+\newblock Chase++: Fountain-enabled fast flooding in asynchronous duty cycle
+  networks.
+\newblock In {\em Proceedings of INFOCOM}, 2018.
+
+\bibitem{indriya}
+M.~Doddavenkatappa, M.~C. Chan, and A.~L. Ananda.
+\newblock Indriya: A low-cost, 3d wireless sensor network testbed.
+\newblock In {\em Proceedings of TRIDENTCOM}, 2011.
+
+\bibitem{splash}
+M.~Doddavenkatappa, M.~C. Chan, and B.~Leong.
+\newblock Splash: fast data dissemination with constructive interference in
+  wireless sensor networks.
+\newblock In {\em Proceedings of NSDI}, 2013.
+
+\bibitem{dong2011link}
+W.~Dong, Y.~Liu, C.~Wang, X.~Liu, C.~Chen, and J.~Bu.
+\newblock Link quality aware code dissemination in wireless sensor networks.
+\newblock In {\em Proceedings of ICNP}, 2011.
+
+\bibitem{glossy}
+F.~Ferrari, M.~Zimmerling, L.~Thiele, and O.~Saukh.
+\newblock Efficient network flooding and time synchronization with glossy.
+\newblock In {\em Proceedings of IPSN}, 2011.
+
+\bibitem{guo2014opportunistic}
+S.~Guo, L.~He, Y.~Gu, B.~Jiang, and T.~He.
+\newblock Opportunistic flooding in low-duty-cycle wireless sensor networks
+  with unreliable links.
+\newblock {\em IEEE Transactions on Computers}, 63(11):2787--2802, 2014.
+
+\bibitem{cord}
+L.~Huang and S.~Setia.
+\newblock Cord: Energy-efficient reliable bulk data dissemination in sensor
+  networks.
+\newblock In {\em Proceedings of INFOCOM}, 2008.
+
+\bibitem{deluge}
+J.~W. Hui and D.~Culler.
+\newblock The dynamic behavior of a data dissemination protocol for network
+  programming at scale.
+\newblock In {\em Proceedings of Sensys}, 2004.
+
+\bibitem{orw}
+O.~Landsiedel, E.~Ghadimi, S.~Duquennoy, and M.~Johansson.
+\newblock Low power, low delay: opportunistic routing meets duty cycling.
+\newblock In {\em Proceedings of IPSN}, 2012.
+
+\bibitem{citysee}
+X.~Mao, X.~Miao, Y.~He, X.-Y. Li, and Y.~Liu.
+\newblock Citysee: Urban co 2 monitoring with sensors.
+\newblock In {\em Proceedings of INFOCOM}, 2012.
+
+\bibitem{greenorbs}
+L.~Mo, Y.~He, Y.~Liu, J.~Zhao, S.-J. Tang, X.-Y. Li, and G.~Dai.
+\newblock Canopy closure estimates with greenorbs: sustainable sensing in the
+  forest.
+\newblock In {\em Proceedings of Sensys}, 2009.
+
+\bibitem{box}
+D.~Moss and P.~Levis.
+\newblock Box-macs: Exploiting physical and link layer boundaries in low-power
+  networking.
+\newblock {\em Technical Report SING-08-00, Stanford}, 2008.
+
+\bibitem{sprinkler}
+V.~Naik, A.~Arora, P.~Sinha, and H.~Zhang.
+\newblock Sprinkler: A reliable and energy efficient data dissemination service
+  for extreme scale wireless networks of embedded devices.
+\newblock {\em IEEE Transactions on Mobile Computing}, 6(7):777--789, 2007.
+
+\bibitem{adb}
+Y.~Sun, O.~Gurewitz, S.~Du, L.~Tang, and D.~B. Johnson.
+\newblock Adb: an efficient multihop broadcast protocol based on asynchronous
+  duty-cycling in wireless sensor networks.
+\newblock In {\em Proceedings of Sensys}, 2009.
+
+\bibitem{drip}
+G.~Tolle and D.~E. Culler.
+\newblock Design of an application-cooperative management system for wireless
+  sensor networks.
+\newblock In {\em Proceedings of EWSN}, 2005.
+
+\bibitem{wang2012reliable}
+F.~Wang and J.~Liu.
+\newblock On reliable broadcast in low duty-cycle wireless sensor networks.
+\newblock {\em IEEE Transactions on Mobile Computing}, 11(5):767--779, 2012.
+
+\bibitem{sleep}
+J.~Wang, Z.~Cao, X.~Mao, and Y.~Liu.
+\newblock Sleep in the dins: Insomnia therapy for duty-cycled sensor networks.
+\newblock In {\em Proceedings of INFOCOM}, 2014.
+
+\bibitem{wang2013exploiting}
+Y.~Wang, Y.~He, X.~Mao, Y.~Liu, and X.-Y. Li.
+\newblock Exploiting constructive interference for scalable flooding in
+  wireless networks.
+\newblock {\em IEEE/ACM Transactions on Networking}, 21(6):1880--1889, 2013.
+
+\bibitem{zisense}
+X.~Zheng, Z.~Cao, J.~Wang, Y.~He, and Y.~Liu.
+\newblock Zisense: towards interference resilient duty cycling in wireless
+  sensor networks.
+\newblock In {\em Proceedings of Sensys}, 2014.
+
+\bibitem{zheng2016bulk}
+X.~Zheng, J.~Wang, W.~Dong, Y.~He, and Y.~Liu.
+\newblock Bulk data dissemination in wireless sensor networks: analysis,
+  implications and improvement.
+\newblock {\em IEEE Transactions on Computers}, 65(5):1428--1439, 2016.
+
+\bibitem{cflood}
+T.~Zhu, Z.~Zhong, T.~He, and Z.-L. Zhang.
+\newblock Exploring link correlation for efficient flooding in wireless sensor
+  networks.
+\newblock In {\em Proceedings of NSDI}, 2010.
+
+\end{thebibliography}

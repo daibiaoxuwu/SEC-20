@@ -1,0 +1,33 @@
+Dumping field info for message class #38983
+Field	Type	Null	Key	Default	Extra
+nodeid	int(11)	YES		0	
+seq_no	int(11)	YES		0	
+src_id	int(11)	YES		0	
+rec_time_h	int(11)	YES		0	
+rec_time_l	int(11)	YES		0	
+hop_delay_h	int(11)	YES		0	
+hop_delay_l	int(11)	YES		0	
+insert_time	timestamp	NO		CURRENT_TIMESTAMP	on update CURRENT_TIMESTAMP
+motelabMoteID	int(11)	YES		NULL	
+milli_time	bigint(20)	YES		NULL	
+motelabSeqNo	int(11)	NO	PRI	NULL	auto_increment
+Dumping field info for message class #38984
+Field	Type	Null	Key	Default	Extra
+nodeid	int(11)	YES		0	
+clock_time_h	int(11)	YES		0	
+clock_time_l	int(11)	YES		0	
+dc_time_h	int(11)	YES		0	
+dc_time_l	int(11)	YES		0	
+insert_time	timestamp	NO		CURRENT_TIMESTAMP	on update CURRENT_TIMESTAMP
+motelabMoteID	int(11)	YES		NULL	
+milli_time	bigint(20)	YES		NULL	
+motelabSeqNo	int(11)	NO	PRI	NULL	auto_increment
+Dumping field info for message class #38985
+Field	Type	Null	Key	Default	Extra
+seq_no	int(11)	YES		0	
+time_flood_h	int(11)	YES		0	
+time_flood_l	int(11)	YES		0	
+insert_time	timestamp	NO		CURRENT_TIMESTAMP	on update CURRENT_TIMESTAMP
+motelabMoteID	int(11)	YES		NULL	
+milli_time	bigint(20)	YES		NULL	
+motelabSeqNo	int(11)	NO	PRI	NULL	auto_increment

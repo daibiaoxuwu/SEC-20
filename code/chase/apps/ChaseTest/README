@@ -1,0 +1,20 @@
+This application is to test the performance of Chase. The sink node (configured in line 60 ChaseTestC.nc) initializes a flooding every 2 sec.
+
+To evaluate the Chase performance, we collect two metrics for each node. You can choose use PrinftClient (define ENABLE_PR in Makefile) to receive the message. The other way is to use mig message (define CHASE_TAIL_TEST in Makefile) to collect message.
+
+1) per hop delay
+   each node will be triggered to send a delay message when either initializes a flooding or receives a flooding packet.
+   a) chase_flood_msg is used to record the local time when sink initializes a flooding.
+   b) chase_delay_msg is used to record the local time when a node receive a flooding packet, the local time when the sender sent out the recieved flooding packet and the corresponding sender node ID.
+
+2) radio duty cycle
+   each node periodically (currently 60 sec) reports its status.
+   a) chase_energy_msg records the radio on time and system time for radio duty cycle calculation.
+
+Due to the different formats between printf and mig, we provide two perl script to analysis the completion time and radio duty cycle of each node.
+
+1) mig message
+   You can use mig_chase_analysis.pl. Take the output of Indriya testbed as an example, you need to save chase_flood_msg, chase_delay_msg and chase_energy_msg as flood.log, delay.log and energy.log three files. This script can analyze the performance when the nodes are no more than 150 and flooding packets are no more than 20.
+
+2) printf client
+   You can use print_chase_analysis.pl. You need create a print file for each node and records all three types of information in the same file for each node. In this script, the node id is from 0 to 49.

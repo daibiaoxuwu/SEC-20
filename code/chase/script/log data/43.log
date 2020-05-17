@@ -1,0 +1,13 @@
+Thread[Thread-1,5,main]delay 0 42 0 27975 0 27979
+a flood packet is received!
+delay 1 42 0 37702 0 37706
+a flood packet is received!
+delay 2 22 0 47846 0 48411
+a flood packet is received!
+delay 3 0 0 57976 0 40986
+a flood packet is received!
+energy 0 61462 0 4510
+delay 4 22 1 3036 1 3601
+a flood packet is received!
+delay 5 22 1 13097 1 13655
+a flood packet is received!

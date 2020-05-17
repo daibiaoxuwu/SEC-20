@@ -1,0 +1,75 @@
+\documentclass[nonacm,sigconf]{acmart}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\begin{document}
+
+\title{Rebuttal for ACM MobiHoc 2020 Submission}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% DO NOT CHANGE the meta setting of this template such as line spacing, font size, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%% You can update the followings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Paper Information}
+
+{\bf \noindent Paper Title:} ``COFlood: Concurrent Opportunistic Flooding in Asynchronous Duty Cycle Networks''
+
+{\bf \noindent Paper \#: 767}
+ 
+Thanks for three reviewers' constructive and insightful comments.
+
+\section{Response to Reviewer A}
+%Thanks for your constructive and insightful comments.
+
+\textbf{(2.1)} In section 3.1, there is no proof that the minimization problem is NP-hard. Be mindful that you need to show a polynomial reduction for the minimum weight connected dominating set problem to this problem.
+
+\textbf{Response:} Indeed, we do not provide the detailed proof to reduct our problem to the MWCDS problem. For simplicity, we present the specific definition of our problem, then use an illustrative example to show our problem is kind of MWCDS problem. We will add the detailed proof in the next version.
+
+\textbf{(2.2)} It is very hard to understand what the algorithm does from the description in 3.2. Two issues contribute to the challenge. First there is no overview of how the sender selection works. Second the three algorithms refer to each other and the cross reference adds to the challenge for readers.
+
+\textbf{Response:} We fully understand your points about our algorithm descriptions. The basic structure of our algorithm is similar with that of distance vector routing algorithm which adopts Bellman-Ford equation to update routing entries, but a node needs to maintain two network metrics (e.g., EBQ and PBT). We split the whole algorithm to 3 parts to make each of them short. Algorithm 1 summarizes the whole algorithm operated by a node in a distributed manner, then Algorithm 2 and 3 present the strategies to update the node's EBQ and PBT metrics with the new received neighbor metrics.
+
+\section{Response to Reviewer B}
+%Thanks for your constructive and insightful comments.
+
+\textbf{(3.1)} The performance is evaluated by two indicators, completion time and radio duty cycle. It may be more convincing to evaluate by more indicators.
+
+\textbf{Response:} That is true. It would be more comprehensive to evaluate our protocol with more indicators such as tail length, retransmission counter.
+
+\textbf{(3.2)} The sentences in the first paragraph in Section 3.2 may be not very accurate. EBQ is related to both variables, i.e., expected time of preamble packet broadcast and number of children. One must be controlled for the other variable.
+
+\textbf{Response:} We agree with your comments. We should modify the sentences to remove the ambiguity.
+
+%\textbf{(3.3)} There are some grammatical errors and typos which need to be corrected. The notation $i$ may be confused in Equation (5) of $p_i$ and the loop variable $i$. The values of W in Figure 6(b)(c) leave out the factor $T$.
+
+%\textbf{Response:} Thanks again for your careful reading.
+
+\section{Response to Reviewer C}
+%Thanks for your constructive and insightful comments.
+
+\textbf{(4.1)} %The main objective of this paper is to develop a broadcasting scheme in asynchronous duty cycle networks with minimum expected completion time. The network is represented by an edge-weighted graph in which each edge weight is the packet reception ratio of the corresponding wireless link. A broadcasting scheme is then represented by a rooted spanning tree. The expected delay of each non-leaf node is the maximum expected delay of the links to its children. 
+The paper incorrectly uses the total expected delays of all non-leaf nodes as the completion time. While minimizing the total delay is a generalization of the minimum connected dominating set (instead of the minimum dominating set claimed in the paper) and is thus NP-hard, minimizing the completion time may have different computation hardness. Thus, the heuristics developed in this paper does not address the targeted broadcasting problem.
+
+\textbf{Response:} That is true that our primary objective is to minimize the completion time, but we cannot directly model the completion time since our under-layer protocol~\cite{chase} does not rely on any time synchronization. Moreover, according to our empirical study, we have observed that the number of concurrent senders is highly related to the completion time. Then, we mainly focus on developing the optimal strategy of concurrent sender selection. As shown in Section 3, our strategy consists of two parts. One is to select a small set of concurrent senders, which covers the whole network with the minimum transmissions. In this way, we guarantee both network coverage and the efficiency of concurrent broadcast. Indeed, this minimization problem is not the full picture of completion time minimization. Hence, based on the concurrent flooding tree, we further take the advantage of the early wake-up leaf nodes, which satisfy two opportunistic conditions, to shorten the completion time.
+
+\textbf{(4.2)} The model of the expected delay as the ratio of the sleep interval length to the expected packet reception ratio (PRR) is an over-simplification. It seems that the PRR only captures the impact of noise. However, when multiple nearby nodes transmit at the same time, a receiving node may suffer from wireless interference. The amount of wireless interference further depends on the choice of the rooted spanning tree. The paper totally ignores the impact of the wireless interference, and thus the simulation results does not reflect the real performance. In contrast, as mentioned in Section 1, the prior works did consider the impact of the interference. For example in~\cite{chase}, when several signals are overlapped, a receiver successfully receives the strongest signal when its signal strength is 3dBm larger than the sum of others and it comes no later than 160µs than the earliest coming weak signal.
+
+\textbf{Response:} We agree with you that the expected delay is easily affected if the interference is not carefully handled. To deal with the potential contention and collision, our protocol is sitting on \emph{Chase}~\cite{chase}. As you already noticed, \emph{Chase} enables efficient concurrent broadcast with capture effect. If the efficiency of concurrent broadcast is guaranteed, the interference among multiple neighbor senders has neglectable influence on the expected delay. During the construction of our concurrent flooding tree, we improve the efficiency of concurrent broadcast by minimizing the total transmissions. Therefore, we can estimate the expected delay by only considering the PRR.
+
+\textbf{(4.3)} The performance analysis with only empirical study is a little bit weak.
+
+\textbf{Response:} Thanks for your comment. We will add more theoretic analysis about our proposed algorithms in the next version.
+
+\bibliographystyle{ACM-Reference-Format}
+
+\bibliography{main}
+
+\end{document}

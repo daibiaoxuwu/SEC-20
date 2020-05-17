@@ -1,0 +1,88 @@
+\documentclass[sigconf]{acmart}
+%\documentclass[10pt, conference, letterpaper]{IEEEtran}
+
+\setcopyright{none}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
+
+\usepackage{caption}
+\usepackage[tight,footnotesize]{subfigure}
+
+%\usepackage{flushend}
+
+%\linespread{1.02}
+
+\usepackage{color}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+%\ifCLASSINFOpdf
+%  \usepackage[pdftex]{graphicx}
+%\else
+%  \usepackage[dvips]{graphicx}
+%\fi
+
+\usepackage{array}
+
+%\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\begin{document}
+
+\title{SRPeek: A Super Resolution Based Screen Peeking Threat Model}
+
+\author{Jialuo Du}
+\affiliation{%
+  \institution{Tsinghua University}
+}
+\email{dujluo@gmail.com}
+
+\author{Zhichao Cao}
+\affiliation{%
+  \institution{Tsinghua University}
+}
+\email{caozc@msu.edu}
+
+%\author{\IEEEauthorblockN{Zhichao Cao\IEEEauthorrefmark{1},
+%xXiaolong Zheng\IEEEauthorrefmark{2},
+%Qiang Ma\IEEEauthorrefmark{1},
+%Xin Miao\IEEEauthorrefmark{1}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Software, Tsinghua University, China\\
+%\IEEEauthorrefmark{2}School of Computer Science, Beijing University of Posts and Telecommunications, China\\
+%\{caozc, thumaq, miaoxin\}@tsinghua.edu.cn,  zhengxiaolong@bupt.edu.cn}
+%}
+
+\input{abstract}
+
+\maketitle
+
+\input{introduction}
+
+\input{threat_model}
+
+\input{design}
+
+\input{implementation}
+
+\input{evaluation}
+
+\input{related_work}
+
+\section{Conclusion}
+\label{sec-conclusion}
+
+
+%\clearpage
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+
+
