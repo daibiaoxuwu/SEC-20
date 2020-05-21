@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.8.7)  17 MAY 2020 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.8.7)  22 MAY 2020 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,24 +1054,32 @@ Overfull \hbox (1.87193pt too wide) in paragraph at lines 18--19
 
 [1.1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./pic/zeros.png>]) (./threat_model.tex) (./design.tex
-<./pic/system.png, id=166, 640.19176pt x 959.38425pt>
+])
+(./threat_model.tex) (./design.tex
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 14.
+ [2.2 <./pic/zeros.png>]
+<./pic/system.png, id=178, 640.19176pt x 959.38425pt>
 File: ./pic/system.png Graphic file (type png)
 <use ./pic/system.png>
 Package pdftex.def Info: ./pic/system.png  used on input line 17.
 (pdftex.def)             Requested size: 189.86061pt x 284.52371pt.
-) (./implementation.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 19.
- [2.2])
-(./evaluation.tex [3.3 <./pic/system.png>]) (./related_work.tex [4.4]
+)
+(./implementation.tex) (./evaluation.tex
+Underfull \vbox (badness 1052) has occurred while \output is active []
+
+ [3.3 <./pic/system.png>]) (./related_work.tex [4.4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 (./main.bbl
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 7.
- [5.5]) [6.6
+
+Underfull \vbox (badness 3000) has occurred while \output is active []
+
+ [5.5])
+[6.6
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
@@ -1080,21 +1088,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 46444C2A04DA020AF0D95DCFABC861AB;5386.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 1BE1EDA624E1885A3F77A58B9691D3B0;5386.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
  17982 strings out of 492609
  266693 string characters out of 6130449
- 386269 words of memory out of 5000000
+ 389269 words of memory out of 5000000
  21105 multiletter control sequences out of 15000+600000
  70925 words of font info for 270 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,2763b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,94p,2763b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{c:/tex
 live/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2019/texmf-dist/fo
 nts/enc/dvips/libertine/lbtn_lyu3x3.enc}{c:/texlive/2019/texmf-dist/fonts/enc/d
@@ -1109,7 +1113,7 @@ xlive/2019/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/texlive/2019/texm
 f-dist/fonts/type1/public/newtx/txexs.pfb><c:/texlive/2019/texmf-dist/fonts/typ
 e1/public/newtx/txsys.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/newtx/
 zxlri.pfb>
-Output written on main.pdf (6 pages, 582291 bytes).
+Output written on main.pdf (6 pages, 583417 bytes).
 PDF statistics:
  297 PDF objects out of 1000 (max. 8388607)
  273 compressed objects within 3 object streams
