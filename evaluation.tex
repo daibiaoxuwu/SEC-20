@@ -3,80 +3,89 @@
 We evaluate the ability of the network model, testing its performance in different training and testing conditions.
 \subsection{Performance In Controlled Environment}
 We train and test the model with the images captured with exactly the same environment parameters. On average the model achieves … accuracy.
-Data	Daytime,1.2m… 	Nighttime,1.2m…	Daytime,1.4m…					
-Difference(PSNR)								
-OCR Accuracy								
+\begin{table}  
+
+\begin{tabular}{c|c|c|c|c} 
+Environment & Day,1.4m & Day,1.8m & Night,1.4m & Night,1.8m \\ \hline
+PSNR(db) & 14.64 & 11.17 & 9.744 & 9.558 \\ \hline
+OCR Accuracy(\%) & 100 & 
+\end{tabular} 
+\caption{Performance in Controlled Environment}
+\end{table}
+DataDaytime,1.2m… Nighttime,1.2m…Daytime,1.4m…
+Difference(PSNR)
+OCR Accuracy
 We compare the results to discover the influence of the surrounding environment: The model performs best in nighttime and strong sunlight may decrease its ability…
 \subsection{Performance In Random Environment}
 We train the model with data captured in 10 different environments and test its ability in another 10 different environments. The model achieves … accuracy. It has a better performance in daytime…
 
 
-Data	Training Environment  	Test
-Environment1	Test2	Test3				
-Difference(PSNR)								
-OCR Accuracy								
+DataTraining Environment  Test
+Environment1Test2Test3
+Difference(PSNR)
+OCR Accuracy
 \subsection{Adapting Ability}
 We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model’s performance in other environments.
-Groups of Data	All 10	Night only	1.2m distance only	Direct angle only				
-Difference(PSNR)								
-OCR Accuracy								
+Groups of DataAll 10Night only1.2m distance onlyDirect angle only
+Difference(PSNR)
+OCR Accuracy
 Variations in light parameter in training data is crucial to a robust model. Variations in distance is not so influential to the results.
 \subsection{Data Amount}
 We use less numbers of images in each group of data and see the performance of the models.
-Amount	60,000	40,000	30,000	10,000				
-Difference(PSNR)								
-OCR Accuracy								
+Amount60,00040,00030,00010,000
+Difference(PSNR)
+OCR Accuracy
 \subsection{Model Size}
 We cut the model size for better performance in smartphones. We modify the number of layers, channels in convolution layers, and output channels in merging processes.
-Model	Full	5 layer	32channel					
-Parameter Count								
-Total training time								
-Difference(PSNR)								
-OCR Accuracy								
+ModelFull5 layer32channel
+Parameter Count
+Total training time
+Difference(PSNR)
+OCR Accuracy
 \subsection{Comparison with other architectures}
 We train and test other commonly used architectures with the same sets of data and evaluate their results.
-Model	Ours	SRCNN						
-Parameter Count								
-Difference(PSNR)								
-OCR Accuracy								
+ModelOursSRCNN
+Parameter Count
+Difference(PSNR)
+OCR Accuracy
 
 \section{System Evaluation}
 \subsection{Accuracy}
 We build the system on smartphone and evaluate its performance in real-life environments. We experiment with … smartphone for the attacker and … smartphone for the victim. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty.
-Scenario	Home	Office	Public Transport	Theater
-Valid images				
-Running time				
-OCR Accuracy				
-Human Recognition Accuracy(raw data)				
-Human Recognition Accuracy(processed image)				
-Human Recognition Time				
+ScenarioHomeOfficePublic TransportTheater
+Valid images
+Running time
+OCR Accuracy
+Human Recognition Accuracy(raw data)
+Human Recognition Accuracy(processed image)
+Human Recognition Time
 \subsection{Influence of distance}
 We repeat our experiment in different distances and evaluate the accuracy.
-Accuracy	Scenario	Home	Office	Public Transport	Theater
-Distance					
-1m					
-1.2m					
-1.4m					
-1.6m					
-2m					
+AccuracyScenarioHomeOfficePublic TransportTheater
+Distance
+1m
+1.2m
+1.4m
+1.6m
+2m
 \subsection{Influence of hand tremors}
 We ask 5 participants to capture images with handheld smartphones, keeping their hand still to their greatest effort(Handheld camera). We process these images and let them read the results. We compare this performance to the data collected on stationary phones to evaluate the influence of hand tremors.
 We also ask participants to hold a smartphone in their hands and read a piece of text, without other additional instructions(Handheld target). The user may freely interact with the phone when reading. We capture images of the phone at the same time to see how our system deal with a moving target screen.
-Scenario	Stationary	Handheld camera	Handheld target	‘Handheld camera and target
-Valid images				
-Running time				
-OCR Accuracy				
-Human Recognition Accuracy(raw data)				
-Human Recognition Accuracy(processed image)				
-Human Recognition Time				
+ScenarioStationaryHandheld cameraHandheld target‘Handheld camera and target
+Valid images
+Running time
+OCR Accuracy
+Human Recognition Accuracy(raw data)
+Human Recognition Accuracy(processed image)
+Human Recognition Time
 \subsection{Success rate in different tasks}
 We test the success rate of obtaining crucial information when the observed participant perform several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters. The observed participant will turn off the screen of his phone as soon as he/she finishes the task, while the observing participant will observe through our APP, constantly capturing images and processing them to display a real-time and magnified view of the observed phone. For the first two tasks,we ask the observing participant several questions to test if he/she have collected the vital information(e.g. the name or the location mentioned in the text). For the task of recognizing PIN and passwords, we use accuracy per character as a supplementary evaluation metric.
-Scenario	Read text	Type text	Enter PIN	Enter complex password
-Accuracy				
-Accuracy per character				
-Human Recognition Accuracy(raw image)				
-Human Recognition Accuracy(Processed image)				
-Human Recognition Time				
+ScenarioRead textType textEnter PINEnter complex password
+Accuracy
+Accuracy per character
+Human Recognition Accuracy(raw image)
+Human Recognition Accuracy(Processed image)
+Human Recognition Time
 \subsection{Perceived shoulder surfing susceptibility}
 We ask the observed participant to rate the perceived shoulder-surfing susceptibility in these scenario.
 \section{Limitations}
@@ -86,5 +95,6 @@ Latest models of smartphones can capture images at 10 frames per second in burst
 To achieve best performance the user needs a phone with strong processing capabilities to run the neural network at real time. As neural networks have been common place in numerous modern APPs, most phones of the latest generation have upgraded their processing ability to run neural networks, but older versions might not possess such processing powers and cannot process images at real-time.
 \subsection{Motion and Tremors}
 In our experiment we assume the observed user will hold still his/hers phone, and not making interactions too often. However some users may tilt their phones during interactions—especially when typing with one hand. Too much tremor will cause motion blur in captured images and misalignment between frames, thus degrading the result.
+
 
 
