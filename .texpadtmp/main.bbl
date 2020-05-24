@@ -1,128 +1,179 @@
 \begin{thebibliography}{10}
 
-\bibitem{chase}
-Z.~Cao, D.~Liu, J.~Wang, and X.~Zheng.
-\newblock Chase: Taming concurrent broadcast for flooding in asynchronous duty
-  cycle networks.
-\newblock {\em IEEE/ACM Transactions on Networking}, 2017.
+\bibitem{brudy2014anyone}
+F.~Brudy, D.~Ledo, and S.~Greenberg.
+\newblock Is anyone looking? mediating shoulder surfing on public displays (the
+  video).
+\newblock In {\em CHI'14 Extended Abstracts on Human Factors in Computing
+  Systems}, pages 159--160. 2014.
 
-\bibitem{chase++}
-Z.~Cao, J.~Wang, D.~Liu, X.~Miao, Q.~Ma, and X.~Mao.
-\newblock Chase++: Fountain-enabled fast flooding in asynchronous duty cycle
+\bibitem{caballero2017real}
+J.~Caballero, C.~Ledig, A.~Aitken, A.~Acosta, J.~Totz, Z.~Wang, and W.~Shi.
+\newblock Real-time video super-resolution with spatio-temporal networks and
+  motion compensation.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 4778--4787, 2017.
+
+\bibitem{chakraborty2014tag}
+N.~Chakraborty and S.~Mondal.
+\newblock Tag digit based honeypot to detect shoulder surfing attack.
+\newblock In {\em International Symposium on Security in Computing and
+  Communication}, pages 101--110. Springer, 2014.
+
+\bibitem{Chun2019Keep}
+C.-Y.~D. Chen, B.-Y. Lin, J.~Wang, and K.~G. Shin.
+\newblock Keep others from peeking at your mobile device screen!
+\newblock In {\em The 25th Annual International Conference}, 2019.
+
+\bibitem{dong2015image}
+C.~Dong, C.~C. Loy, K.~He, and X.~Tang.
+\newblock Image super-resolution using deep convolutional networks.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  38(2):295--307, 2015.
+
+\bibitem{8834937}
+Z.~{Dong}, S.~{Zhang}, B.~{Ma}, D.~{Qi}, L.~{Luo}, and M.~{Zhou}.
+\newblock A hybrid multi-frame super-resolution algorithm using multi-channel
+  memristive pulse coupled neural network and sparse coding.
+\newblock In {\em 2019 7th International Conference on Information,
+  Communication and Networks (ICICN)}, pages 185--190, 2019.
+
+\bibitem{eiband2017understanding}
+M.~Eiband, M.~Khamis, E.~Von~Zezschwitz, H.~Hussmann, and F.~Alt.
+\newblock Understanding shoulder surfing in the wild: Stories from users and
+  observers.
+\newblock In {\em Proceedings of the 2017 CHI Conference on Human Factors in
+  Computing Systems}, pages 4254--4265, 2017.
+
+\bibitem{farsiu2003robust}
+S.~Farsiu, D.~Robinson, M.~Elad, and P.~Milanfar.
+\newblock Robust shift and add approach to superresolution.
+\newblock In {\em Applications of Digital Image Processing XXVI}, volume 5203,
+  pages 121--130. International Society for Optics and Photonics, 2003.
+
+\bibitem{goucher2011look}
+W.~Goucher.
+\newblock Look behind you: the dangers of shoulder surfing.
+\newblock {\em Computer Fraud \& Security}, 2011(11):17--20, 2011.
+
+\bibitem{huang2017video}
+Y.~Huang, W.~Wang, and L.~Wang.
+\newblock Video super-resolution via bidirectional recurrent convolutional
   networks.
-\newblock In {\em Proceedings of INFOCOM}, 2018.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  40(4):1015--1028, 2017.
 
-\bibitem{indriya}
-M.~Doddavenkatappa, M.~C. Chan, and A.~L. Ananda.
-\newblock Indriya: A low-cost, 3d wireless sensor network testbed.
-\newblock In {\em Proceedings of TRIDENTCOM}, 2011.
+\bibitem{kappeler2016video}
+A.~Kappeler, S.~Yoo, Q.~Dai, and A.~K. Katsaggelos.
+\newblock Video super-resolution with convolutional neural networks.
+\newblock {\em IEEE Transactions on Computational Imaging}, 2(2):109--122,
+  2016.
 
-\bibitem{splash}
-M.~Doddavenkatappa, M.~C. Chan, and B.~Leong.
-\newblock Splash: fast data dissemination with constructive interference in
-  wireless sensor networks.
-\newblock In {\em Proceedings of NSDI}, 2013.
+\bibitem{kawulok2019deep}
+M.~Kawulok, P.~Benecki, S.~Piechaczek, K.~Hrynczenko, D.~Kostrzewa, and
+  J.~Nalepa.
+\newblock Deep learning for multiple-image super-resolution.
+\newblock {\em IEEE Geoscience and Remote Sensing Letters}, 2019.
 
-\bibitem{dong2011link}
-W.~Dong, Y.~Liu, C.~Wang, X.~Liu, C.~Chen, and J.~Bu.
-\newblock Link quality aware code dissemination in wireless sensor networks.
-\newblock In {\em Proceedings of ICNP}, 2011.
+\bibitem{kumar2007reducing}
+M.~Kumar, T.~Garfinkel, D.~Boneh, and T.~Winograd.
+\newblock Reducing shoulder-surfing by using gaze-based password entry.
+\newblock In {\em Proceedings of the 3rd symposium on Usable privacy and
+  security}, pages 13--19, 2007.
 
-\bibitem{glossy}
-F.~Ferrari, M.~Zimmerling, L.~Thiele, and O.~Saukh.
-\newblock Efficient network flooding and time synchronization with glossy.
-\newblock In {\em Proceedings of IPSN}, 2011.
+\bibitem{kwon2013covert}
+T.~Kwon, S.~Shin, and S.~Na.
+\newblock Covert attentional shoulder surfing: Human adversaries are more
+  powerful than expected.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  44(6):716--727, 2013.
 
-\bibitem{guo2014opportunistic}
-S.~Guo, L.~He, Y.~Gu, B.~Jiang, and T.~He.
-\newblock Opportunistic flooding in low-duty-cycle wireless sensor networks
-  with unreliable links.
-\newblock {\em IEEE Transactions on Computers}, 63(11):2787--2802, 2014.
+\bibitem{ledig2017photo}
+C.~Ledig, L.~Theis, F.~Husz{\'a}r, J.~Caballero, A.~Cunningham, A.~Acosta,
+  A.~Aitken, A.~Tejani, J.~Totz, Z.~Wang, et~al.
+\newblock Photo-realistic single image super-resolution using a generative
+  adversarial network.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 4681--4690, 2017.
 
-\bibitem{cord}
-L.~Huang and S.~Setia.
-\newblock Cord: Energy-efficient reliable bulk data dissemination in sensor
-  networks.
-\newblock In {\em Proceedings of INFOCOM}, 2008.
+\bibitem{lucas2019generative}
+A.~Lucas, S.~Lopez-Tapia, R.~Molina, and A.~K. Katsaggelos.
+\newblock Generative adversarial networks and perceptual losses for video
+  super-resolution.
+\newblock {\em IEEE Transactions on Image Processing}, 28(7):3312--3327, 2019.
 
-\bibitem{deluge}
-J.~W. Hui and D.~Culler.
-\newblock The dynamic behavior of a data dissemination protocol for network
-  programming at scale.
-\newblock In {\em Proceedings of Sensys}, 2004.
+\bibitem{lyn2020image}
+J.~Lyn and S.~Yan.
+\newblock Image super-resolution reconstruction based on attention mechanism
+  and feature fusion.
+\newblock {\em arXiv preprint arXiv:2004.03939}, 2020.
 
-\bibitem{orw}
-O.~Landsiedel, E.~Ghadimi, S.~Duquennoy, and M.~Johansson.
-\newblock Low power, low delay: opportunistic routing meets duty cycling.
-\newblock In {\em Proceedings of IPSN}, 2012.
+\bibitem{maggi2011poster}
+F.~Maggi, A.~Volpatto, S.~Gasparini, G.~Boracchi, and S.~Zanero.
+\newblock Poster: Fast, automatic iphone shoulder surfing.
+\newblock In {\em Proceedings of the 18th ACM conference on Computer and
+  communications security}, pages 805--808, 2011.
 
-\bibitem{citysee}
-X.~Mao, X.~Miao, Y.~He, X.-Y. Li, and Y.~Liu.
-\newblock Citysee: Urban co 2 monitoring with sensors.
-\newblock In {\em Proceedings of INFOCOM}, 2012.
+\bibitem{nasrollahi2020deep}
+H.~Nasrollahi, K.~Farajzadeh, V.~Hosseini, E.~Zarezadeh, and M.~Abdollahzadeh.
+\newblock Deep artifact-free residual network for single-image
+  super-resolution.
+\newblock {\em Signal, Image and Video Processing}, 14(2):407--415, 2020.
 
-\bibitem{greenorbs}
-L.~Mo, Y.~He, Y.~Liu, J.~Zhao, S.-J. Tang, X.-Y. Li, and G.~Dai.
-\newblock Canopy closure estimates with greenorbs: sustainable sensing in the
-  forest.
-\newblock In {\em Proceedings of Sensys}, 2009.
+\bibitem{papadopoulos2017illusionpin}
+A.~Papadopoulos, T.~Nguyen, E.~Durmus, and N.~Memon.
+\newblock Illusionpin: Shoulder-surfing resistant authentication using hybrid
+  images.
+\newblock {\em IEEE Transactions on Information Forensics and Security},
+  12(12):2875--2889, 2017.
 
-\bibitem{box}
-D.~Moss and P.~Levis.
-\newblock Box-macs: Exploiting physical and link layer boundaries in low-power
-  networking.
-\newblock {\em Technical Report SING-08-00, Stanford}, 2008.
+\bibitem{Polotiko2017leakage}
+Polotiko.
+\newblock Aguirre furious at photo leak of private text message, 2017.
 
-\bibitem{sprinkler}
-V.~Naik, A.~Arora, P.~Sinha, and H.~Zhang.
-\newblock Sprinkler: A reliable and energy efficient data dissemination service
-  for extreme scale wireless networks of embedded devices.
-\newblock {\em IEEE Transactions on Mobile Computing}, 6(7):777--789, 2007.
+\bibitem{saad2018communicating}
+A.~Saad, M.~Chukwu, and S.~Schneegass.
+\newblock Communicating shoulder surfing attacks to users.
+\newblock In {\em Proceedings of the 17th International Conference on Mobile
+  and Ubiquitous Multimedia}, pages 147--152, 2018.
 
-\bibitem{adb}
-Y.~Sun, O.~Gurewitz, S.~Du, L.~Tang, and D.~B. Johnson.
-\newblock Adb: an efficient multihop broadcast protocol based on asynchronous
-  duty-cycling in wireless sensor networks.
-\newblock In {\em Proceedings of Sensys}, 2009.
+\bibitem{sajjadi2018frame}
+M.~S. Sajjadi, R.~Vemulapalli, and M.~Brown.
+\newblock Frame-recurrent video super-resolution.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 6626--6634, 2018.
 
-\bibitem{drip}
-G.~Tolle and D.~E. Culler.
-\newblock Design of an application-cooperative management system for wireless
-  sensor networks.
-\newblock In {\em Proceedings of EWSN}, 2005.
+\bibitem{schaub2012password}
+F.~Schaub, R.~Deyhle, and M.~Weber.
+\newblock Password entry usability and shoulder surfing susceptibility on
+  different smartphone platforms.
+\newblock In {\em Proceedings of the 11th international conference on mobile
+  and ubiquitous multimedia}, pages 1--10, 2012.
 
-\bibitem{wang2012reliable}
-F.~Wang and J.~Liu.
-\newblock On reliable broadcast in low duty-cycle wireless sensor networks.
-\newblock {\em IEEE Transactions on Mobile Computing}, 11(5):767--779, 2012.
+\bibitem{shi2016real}
+W.~Shi, J.~Caballero, F.~Husz{\'a}r, J.~Totz, A.~P. Aitken, R.~Bishop,
+  D.~Rueckert, and Z.~Wang.
+\newblock Real-time single image and video super-resolution using an efficient
+  sub-pixel convolutional neural network.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 1874--1883, 2016.
 
-\bibitem{sleep}
-J.~Wang, Z.~Cao, X.~Mao, and Y.~Liu.
-\newblock Sleep in the dins: Insomnia therapy for duty-cycled sensor networks.
-\newblock In {\em Proceedings of INFOCOM}, 2014.
+\bibitem{suetake2008image}
+N.~Suetake, M.~Sakano, and E.~Uchino.
+\newblock Image super-resolution based on local self-similarity.
+\newblock {\em Optical review}, 15(1):26--30, 2008.
 
-\bibitem{wang2013exploiting}
-Y.~Wang, Y.~He, X.~Mao, Y.~Liu, and X.-Y. Li.
-\newblock Exploiting constructive interference for scalable flooding in
-  wireless networks.
-\newblock {\em IEEE/ACM Transactions on Networking}, 21(6):1880--1889, 2013.
+\bibitem{wiedenbeck2006design}
+S.~Wiedenbeck, J.~Waters, L.~Sobrado, and J.-C. Birget.
+\newblock Design and evaluation of a shoulder-surfing resistant graphical
+  password scheme.
+\newblock In {\em Proceedings of the working conference on Advanced visual
+  interfaces}, pages 177--184, 2006.
 
-\bibitem{zisense}
-X.~Zheng, Z.~Cao, J.~Wang, Y.~He, and Y.~Liu.
-\newblock Zisense: towards interference resilient duty cycling in wireless
-  sensor networks.
-\newblock In {\em Proceedings of Sensys}, 2014.
-
-\bibitem{zheng2016bulk}
-X.~Zheng, J.~Wang, W.~Dong, Y.~He, and Y.~Liu.
-\newblock Bulk data dissemination in wireless sensor networks: analysis,
-  implications and improvement.
-\newblock {\em IEEE Transactions on Computers}, 65(5):1428--1439, 2016.
-
-\bibitem{cflood}
-T.~Zhu, Z.~Zhong, T.~He, and Z.-L. Zhang.
-\newblock Exploring link correlation for efficient flooding in wireless sensor
-  networks.
-\newblock In {\em Proceedings of NSDI}, 2010.
+\bibitem{wronski2019handheld}
+B.~Wronski, I.~Garcia-Dorado, M.~Ernst, D.~Kelly, M.~Krainin, C.-K. Liang,
+  M.~Levoy, and P.~Milanfar.
+\newblock Handheld multi-frame super-resolution.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 38(4):1--18, 2019.
 
 \end{thebibliography}
