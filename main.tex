@@ -1,10 +1,10 @@
-\documentclass[sigconf]{acmart}
-%\documentclass[10pt, conference, letterpaper]{IEEEtran}
+%\documentclass[sigconf]{acmart}
+\documentclass[10pt, conference, letterpaper]{IEEEtran}
 
-\setcopyright{none}
-\settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
-\pagestyle{plain} % removes running headers
+%\setcopyright{none}
+%\settopmatter{printacmref=false} % Removes citation information below abstract
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
 
 \usepackage{caption}
 \usepackage[tight,footnotesize]{subfigure}
@@ -20,11 +20,11 @@
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
-%\ifCLASSINFOpdf
-%  \usepackage[pdftex]{graphicx}
-%\else
-%  \usepackage[dvips]{graphicx}
-%\fi
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
 
 \usepackage{array}
 
@@ -38,17 +38,17 @@
 
 \title{SRPeek: A Super Resolution Based Screen Peeking Threat Model}
 
-\author{Jialuo Du}
-\affiliation{%
-  \institution{Tsinghua University}
-}
-\email{dujluo@gmail.com}
+%\author{Jialuo Du}
+%\affiliation{%
+%  \institution{Tsinghua University}
+%}
+%\email{dujluo@gmail.com}
 
-\author{Zhichao Cao}
-\affiliation{%
-  \institution{Tsinghua University}
-}
-\email{caozc@msu.edu}
+%\author{Zhichao Cao}
+%\affiliation{%
+%  \institution{Tsinghua University}
+%}
+%\email{caozc@msu.edu}
 
 %\author{\IEEEauthorblockN{Zhichao Cao\IEEEauthorrefmark{1},
 %xXiaolong Zheng\IEEEauthorrefmark{2},
@@ -59,9 +59,9 @@
 %\{caozc, thumaq, miaoxin\}@tsinghua.edu.cn,  zhengxiaolong@bupt.edu.cn}
 %}
 
-\input{abstract}
-
 \maketitle
+
+\input{abstract}
 
 \input{introduction}
 
