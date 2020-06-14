@@ -1,6 +1,8 @@
 \section{System Design}
 \label{sec-design}
-We designed an end-to-end network architecture consisting of several identical layers in which:
+As mentioned above, we designed merging layers in our network so that we can process the input images by performing convolution operations to each single image, and then merging them together. The merged data will be stacked with the feature maps of each single image before we perform the next layer of convolution on them. Each convolutional layer uses the same set of parameters for all the images, so that the same set of features are extracted from the images, and thus can be merged. The merging layers consists of simple calculations extracting either the most significant, or the mutual features of the images, the former preserving interesting findings while the latter filters out credible features from the redundancy of the input. The network pipeline consists of alternate layers of convolution and merging, and after each merging layer, the reliable information accumulates and more complex features can be extracted with their support. Furthermore, we frequently insert the original input images in each level of our pipeline, creating an unevenness in depth and reducing network complexity, because we discovered that this process guides the model to be loyal to the inputs, generating more truthful results and less artifacts.
+
+The details of our network architecture is as follows:
 	Each input image (or each lane from the output of the previous layer) is assigned to its own lane and processed by several convolutional layers. These layers share parameters across channels; however, each image is processed individually and do not interact with each other in this stage. Each channel will present a feature map of n channels.
 	The features extracted from all layers are merged broadwise with the following function:
 
@@ -14,7 +16,7 @@ The above 3 steps are stacked as one layer. The functional network often consist
 
 \begin{figure}
  \centering
-    \includegraphics[width=0.375\textwidth]{./pic/system.png}
+    \includegraphics[width=0.5\textwidth]{./pic/design.pdf}
     \caption{Network Architecture of SRPeek.}
     \label{fig-system}
 \end{figure}
