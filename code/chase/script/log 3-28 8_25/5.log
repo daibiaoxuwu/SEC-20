@@ -1,2 +1,0 @@
-using saved target 'sky'
-../../tools/sky/serialdump-linux -b115200 /dev/ttyUSB6

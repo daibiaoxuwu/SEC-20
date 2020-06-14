@@ -1,7 +1,0 @@
-using saved target 'sky'
-../../tools/sky/serialdump-linux -b115200 /dev/ttyUSB26
- 7684 P 25.0 0 82483 1884314 0 20278 0 13035 82483 1884314 0 20278 0 13035 (radio 1.03% / 1.03% tx 0.00% / 0.00% listen 1.03% / 1.03%)
-delay: 8 1 0  6 0 8260 13015
-delay: 9 1 0  44 0 9540 3817
-delay: 10 1 0  21 0 9924 9951
-delay: 12 1 0  1 0 12740 17073
