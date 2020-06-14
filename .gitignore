@@ -1,0 +1,10 @@
+*.bak
+*.sav
+*.aux
+*.bbl
+*.synctex.gz
+*.out
+*.pdf
+*.log
+*.blg
+*.ini
