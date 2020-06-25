@@ -148,10 +148,10 @@ INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
+INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT d:/papers/SEC-20/pic/zeros.png
 INPUT d:/papers/SEC-20/pic/zeros.png
 INPUT d:/papers/SEC-20/pic/zeros.png

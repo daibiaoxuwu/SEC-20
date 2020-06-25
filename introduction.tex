@@ -12,6 +12,7 @@ The privacy threat however has been exacerbated with smartphones improved signif
 
 To mitigate this threat, massive efforts have been made, from physical privacy films to alternative password entry interfaces \cite{wiedenbeck2006design,papadopoulos2017illusionpin} and input methods \cite{kumar2007reducing}. All of these methods however require additional cost and/or effort \cite{Chun2019Keep} and are not widely deployed yet on the critical privacy stages (e.g., password entry) of most everyday apps. And none of existing work can deal with the presence of smartphone cameras and SR algorithms in shoulder surfing scenarios. Given that the leakage of a password and the disclosure of correspondence of public figures can cause great damage to the victim, we believe that it's imminent to recall attention on this new privacy threat and propose the corresponding standard of screen protection based on modern circumstances.
 
+\cl{The challenge part can be revised to make it more precise. And it can be described with the new figure.}
 \vspace{1mm}
 \noindent
 \textbf{challenges.} Creating a high-resolution shoulder surfing attack model running on commercial smartphones in real time, however, is not trivial. And we achieve \textsf{SRPeek} by overcoming three key challenges.
@@ -45,9 +46,10 @@ Considering the unique challenges of our application, we believe that if these i
 
 This architecture is beneficial to our task. On one hand, the deep learning part is assigned to each single image, reducing computational complexity and parameter growth, while receiving a global view of all the images, renewed at each layer, thanks to the merging process; on the other hand, information can be shared horizontally with weighted averaging methods, meaning no consideration of sequential order and no reliance of consistency between neighboring frames. Thus, this architecture solves the dilemma mentioned above, and proves perfectly functional in our application.
 
-% The details of our architecture will be discussed in section 4.
-This paper makes the following contributions:
-\begin{itemize}
+\vspace{1mm}
+\noindent
+\textbf{Contributions.} This paper makes the following contributions:
+\begin{itemize}[leftmargin=*]
   \item	We propose \textsf{SRPeek}, a multi-frame SR neural network architecture aiming at reconstructing extremely blurred and defocused images. This model is not only functional in our scenario, as a shoulder-surfing threat model, but also can be used in text-recognition applications prior to recognition algorithms to increase accuracy.
   \item	We design a threat model of shoulder-surfing, with the attacker armed with multi-frame SR algorithms and taking multiple photos (in burst mode) of the victim’s screen with a smartphone camera. To the best of our knowledge, we are the first to consider the presence of smartphone cameras and SR algorithms in shoulder surfing scenarios.
   \item	We demonstrate the effect of this shoulder-surfing attack and prove that it poses a threat to screen privacy.
