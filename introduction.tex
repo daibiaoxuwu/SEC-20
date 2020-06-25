@@ -30,7 +30,7 @@ To mitigate this threat, massive efforts have been made, from physical privacy f
 	\label{fig-zeros}
 \end{figure}
 
-\cl{The following part can correspond to challenges above.}
+\cl{The following part can correspond to challenges above. Remember to be precise and illustrative.}
 In this paper, we present \textsf{SRPeek}, an end-to-end system of shoulder surfing for commercial smartphones. To fully explore this privacy threat with the multi-frame super resolution, we first design a deep learning architecture using convolutional neural network (CNN). With the specially designed network as core, we deliver a holistic system for shoulder surfing on a smartphone. Then it processes them with our neural network to generate a high-resolution image and repeats the process for constant monitoring. As the information of interest is mostly in the form of text (e.g., passwords or e-mails), our network is trained and evaluated on the task of reconstructing text, specifically, Chinese characters, English letters, and numbers, but we believe that this network architecture can function in all scenarios. Our system can also be used as a preprocessor for text-recognition applications when multiple images are available, such as real-time translation apps on a smartphone or text-recognition on self-driving cars.
 
 To deal with massive frames of blurred images with limited computational resources on smartphones, we design an unique merging layer and place it between convolutional layers in the SR pipeline. Thus information can be extracted first from input images independently and then merged together, serving as a reference for the following convolutions.
@@ -45,6 +45,13 @@ Considering the unique challenges of our application, we believe that if these i
 \end{enumerate}
 
 This architecture is beneficial to our task. On one hand, the deep learning part is assigned to each single image, reducing computational complexity and parameter growth, while receiving a global view of all the images, renewed at each layer, thanks to the merging process; on the other hand, information can be shared horizontally with weighted averaging methods, meaning no consideration of sequential order and no reliance of consistency between neighboring frames. Thus, this architecture solves the dilemma mentioned above, and proves perfectly functional in our application.
+
+\cl{Evaluations can be summarized here (performance and comparison with existing works).}
+
+\vspace{1mm}
+\noindent
+\textbf{Summary of Evaluation Results.}
+
 
 \vspace{1mm}
 \noindent
