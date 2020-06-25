@@ -47,7 +47,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \end{enumerate}
 
-These steps are repeatedly executed to enable the attacker to monitor the victim. The workflow of our system is shown in fig.~\ref{fig-workflow}. The training data for the network is also gathered in this way. Different lenses have different photographing abilities and blurring patterns, so the model has to be trained for each phone with training images captured from it. When using smartphones with optical zoom, the images will shift slightly over time even if we keep them completely still, so the aligning phases are still needed. To reduce calculation and better align the images with the ground truth, we drew a box around the text on the victim's screen, replacing the edges of the phone for alignment and cropping in the alignment step (as shown in fig.~\ref{fig-workflow}), but our system works perfectly without it.
+These steps are repeatedly executed to enable the attacker to monitor the victim at an interval of a few seconds. At critical times requiring continuous monitoring so as not to miss transient display, e.g. password entering, the system can simply lengthen the input phase across that period and process the data afterwards. The workflow of our system is shown in fig.~\ref{fig-workflow}.
 \begin{figure}
  \centering
     \includegraphics[width=0.5\textwidth]{./pic/workflow.pdf}
