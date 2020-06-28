@@ -4,7 +4,6 @@
 *.bbl
 *.synctex.gz
 *.out
-main.pdf
 *.log
 *.blg
 *.ini
