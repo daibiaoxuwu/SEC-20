@@ -1,9 +1,7 @@
-\section{Design}
+\section{System Design}
 \label{sec-design}
 
 \subsection{network design}
-
-
 The core of the \textsf{SRPeek} system is a specially designed multi-frame SR neural network, accepting a group of $N$ images indexed $x_1^{(0)}$ to $x_N^{(0)}$ as input and generating an image with higher resolution $y$ as output. The network comprises $L$ layers, each of which implements a non-linear transformation $H_l(\cdot)$, where $l$ indexes the layer. As mentioned before, in each layer images are processed separately, with the merging layers as a revenue for communication, so that the output of each layer is correspondent to the input.  We denote the output of the $l^{th}$ layer as $x_1^{(l)}$ to $x_N^{(l)}$, which is also the input of the $(l+1)^{th}$ layer. Till now the model is not different from traditional SR models:
 
 $$x_i^{(l)} = H_l(x_i^{(l-1)}), i=1,2,...N$$
@@ -63,7 +61,7 @@ $$ y = Conv`_{L}(\{e_{tr}^{(L)},t\in (1,T),r\in (1,R)\})$$
 
 \end{enumerate}
 
-The full structure of a 3 layer network is shown in Fig~\ref{fig-system}.
+The full structure of a 3 layer network is shown in Figure~\ref{fig-system}.
 
 \begin{figure}
  \centering
@@ -84,7 +82,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \item Adjustment. The lines of text(or stuff differing from the background color of the screen) will be carved out for processing, to reduce the workload of the network. The characters are normally around 10x10 pixels in the photos, and the carved segments will leave 2 pixels of padding on all sides to avoid mutilating the character; A certain amount of error is allowed, but if the size of the text is too small or too large, the neural network will not be able to extract features normally, so the images will be zoomed to the right size(and the zooming of step (1) will be adjusted accordingly).
 
-\item Processing. As our network accepts only 9x9 patches, we will iteratively process all the overlapping 9x9 boxes among the input photo. For example, a 10x10 image will be four 9x9 patches, and a 11x11 image nine patches, etc(see fig.~\ref{fig-patches}. After carving a 9x9 patch at corresponding locations of each image, these patches are then processed by our multi-frame super resolution network, generating a single 36x36 image (4x upscaling). The input is RGB colored, while the output, as we are not interested in color, is black and white. When all patches are processed, their outputs are merged together. The overlapping pixels are thus processed: among all the outputs containing this pixel, we collect these values, remove outliers, and use their average as the result. In this way, we generate upscaled image segments of all the characters on the target screen, which are then inserted in one of the input images(roughly upscaled to encompass them, just for reference) and displayed to the attacker.
+\item Processing. As our network accepts only 9x9 patches, we will iteratively process all the overlapping 9x9 boxes among the input photo. For example, a 10x10 image will be four 9x9 patches, and a 11x11 image nine patches, etc(see Figure~\ref{fig-patches}. After carving a 9x9 patch at corresponding locations of each image, these patches are then processed by our multi-frame super resolution network, generating a single 36x36 image (4x upscaling). The input is RGB colored, while the output, as we are not interested in color, is black and white. When all patches are processed, their outputs are merged together. The overlapping pixels are thus processed: among all the outputs containing this pixel, we collect these values, remove outliers, and use their average as the result. In this way, we generate upscaled image segments of all the characters on the target screen, which are then inserted in one of the input images(roughly upscaled to encompass them, just for reference) and displayed to the attacker.
 
 \begin{figure}
  \centering
@@ -95,11 +93,5 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \end{enumerate}
 
-These steps are repeatedly executed to enable the attacker to monitor the victim at an interval of a few seconds. At critical times requiring continuous monitoring so as not to miss transient display, e.g. password entering, the system can simply lengthen the input phase across that period and process the data afterwards. The workflow of our system is shown in fig.~\ref{fig-workflow}.
-\begin{figure}
- \centering
-    \includegraphics[width=0.5\textwidth]{./pic/workflow.pdf}
-    \caption{Illustration of the workflow of our shoulder-surfing system.}
-    \label{fig-workflow}
-\end{figure}
+These steps are repeatedly executed to enable the attacker to monitor the victim at an interval of a few seconds. At critical times requiring continuous monitoring so as not to miss transient display, e.g. password entering, the system can simply lengthen the input phase across that period and process the data afterwards. The workflow of our system is shown in Figure~\ref{fig-workflow}.
 
