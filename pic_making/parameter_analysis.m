@@ -27,6 +27,7 @@ data_root = './';
 fig=figure;
 set(fig,'DefaultAxesFontSize',18);
 set(fig,'DefaultAxesFontWeight','bold');
+%tailor the pdf
 set(fig,'PaperSize',[7 4]);
 
 error_dir = [data_root,'20191124_preliminaryssd_widir.mat'];
@@ -91,5 +92,6 @@ xticklabels({'Path 1','Path 2','Path 3','Path 4'})
 ylabel('Sampling Points'); % y label
 xlim([0 5])
 title('')
+%adjust the ratio
 set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
 saveas(gcf,"./cdf_ssd_widir.pdf")
