@@ -1,5 +1,30 @@
 \section{Related Work}
 \label{sec-related-work}
+\begin{table*}[t]
+    \caption{A comparison of state-of-the-art works on Wi-Fi Imaging.}
+    \vspace{2mm}
+    \begin{center}
+    \begin{tabular}{ccccc}
+    \hline
+     Reference  & Principle &  RF Platform & Method & \#(Tx,Rx) Ant$^{\mathrm{a}}$\\ 
+    \hline
+    Wision~\cite{wision}  & Intensity & USRP-N210 & SAR & (1,8$\times$8)\\ 
+    RF\_Avatar~\cite{rf_avatar}  & Intensity & FMCW Radio & DNN & (4,16)\\ 
+    C. Karanam~\cite{3dimaging_uav} & Intensity (RSSI) & COTS Wi-Fi & SAR & (1,150$\times$150)$^{\mathrm{c}}$\\ 
+    P. Proffitt~\cite{imaging_1} & Intensity & USRP-N210 & SAR \& DNN~\cite{MaskRCNN} & (180, 180)$^{\mathrm{b}}$\\ 
+    P. Holl~\cite{holography} & Intensity \& Phase & 3D Hologram Simulation & Wave Front~\cite{angular} & (1,50$\times$40)$^{\mathrm{d}}$\\ 
+    \hline
+    \textbf{\textsf{WiHolo-2D}} & Intensity \& Polarization & COTS Wi-Fi & 2D IFFT \& GAN &(1,6) \\
+    \hline
+    \multicolumn{5}{l}{$^{\mathrm{a}}$Equivalent static antenna array for antenna scanning. $^{\mathrm{b}} $The receive beam sweeps from $+90^{\circ}$ to $-90^{\circ}$ for one}\\
+    \multicolumn{5}{l}{transmit beam angle between $+90^{\circ}$ and $-90^{\circ}$. $^{\mathrm{c}}$The RX drone measures the RSSI every 2 cm for the 3m$\times$3m area.}\\
+    \multicolumn{5}{l}{$^{\mathrm{d}}$Achieve a resolution of 4.0 cm $\times$ 7.2 cm for the 2m$\times$3m area.}\\
+    \end{tabular}
+    \label{comparison}
+    \end{center}
+\end{table*}
+
+\cl{Compare existing work from several views to present advanntages of SRPeek. Keep the related work part within the page 3.}
 \subsection{Shoulder Surfing}
 With the arrival of the information era, privacy issues are becoming increasingly prominent. Smartphone screen privacy, the concern of our smartphones being observed by strangers in public areas, or shoulder surfing, have been studied heavily in recent years. Surveys of shoulder surfing provides evidence of this behavior in real world \cite{eiband2017understanding} \cite{goucher2011look}, often more efficient than expected\cite{kwon2013covert}. Various techniques and systems have been designed to mitigate this threat. Some systems sense malicious passers-by and hide information \cite{brudy2014anyone} or warn the user\cite{saad2018communicating}; others modify the user interfaces to create honeypots (for passwords)\cite{chakraborty2014tag}, confuse unauthorized parties\cite{wiedenbeck2006design}, or making the interactions invisible\cite{kumar2007reducing} or unreadable from a distance\cite{Chun2019Keep}. Most of the works designing defenses against shoulder surfing assume that the attacker is a casual passer-by, taking occasional peeks with his/hers naked eye, as is the case most of the time\cite{eiband2017understanding}. However, it is the malicious ones, although few, that can utilize the information (passwords, business correspondence, etc.) they obtained to do real harm. On the other hand, the threat model of tool-assisted shoulder surfing is also studied. Schaub, et, al. observed the susceptibility of shoulder surfing from the naked eye\cite{schaub2012password}. Maggi, et al. designed an automatic shoulder surfing threat model, observing the target smartphone with a camera\cite{maggi2011poster}, but without the help of SR techniques, this method can only function when the attacker is standing at close range, which is a barely practical scenario. With the development of smartphone camera, processing ability, and SR technology over the years, we propose a stronger shoulder surfing system in which attackers can successfully obtain information while keeping a distance to avoid suspicion, and prove that this threat is eminent in our daily life.
 
