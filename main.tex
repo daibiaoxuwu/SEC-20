@@ -1,44 +1,44 @@
 %\documentclass[sigconf]{acmart}
-\documentclass[10pt, conference, letterpaper]{IEEEtran}
-
+% \documentclass[10pt, conference, letterpaper]{IEEEtran}
+\documentclass[conference]{IEEEtran}
 %\setcopyright{none}
 %\settopmatter{printacmref=false} % Removes citation information below abstract
 %\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
 %\pagestyle{plain} % removes running headers
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-\usepackage{caption}
 \usepackage[tight,footnotesize]{subfigure}
-
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{enumitem}
 %\usepackage{flushend}
 
 %\linespread{1.02}
-
-\usepackage{color}
-
-\usepackage{algorithm}
-\usepackage{algorithmic}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
-\ifCLASSINFOpdf
-  \usepackage[pdftex]{graphicx}
-\else
-  \usepackage[dvips]{graphicx}
-\fi
-
-\usepackage{array}
+% \ifCLASSINFOpdf
+%   \usepackage[pdftex]{graphicx}
+% \else
+%   \usepackage[dvips]{graphicx}
+% \fi
 
 %\usepackage[cmex10]{amsmath}
-\usepackage{amsmath}
 
-\usepackage{amsthm}
-\usepackage{enumitem}
 
 \newcommand{\cl}[1]{{\color{blue} ~CL: \sf (#1)}}
 
-\usepackage{caption}
-
-\usepackage{booktabs}
 \begin{document}
 
 \title{SRPeek: Super Resolution Enabled Screen Peeking}
