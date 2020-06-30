@@ -1,5 +1,6 @@
- 
-\section{Model Evaluation}
+\section{Evaluation \& Case Study}
+\label{sec-evaluation}
+
 We evaluate the ability of the network model, testing its performance in different training and testing conditions. We perform the following experiments with two phones: a Redmi 6A smartphone, with a single rear camera with 13 million pixels and digital zoom only, and a HUAWEI P40 Pro, with multiple rear cameras, the telephoto camera(which we use in the experiments) possessing up to 5x optical zooming ability which we will utilize fully in our experiments. 
 \subsection{Performance In Controlled Environment}
 We train and test the model with the images captured with exactly the same environment parameters, and used Peak Signal to Noise Ratio to evaluate the accuracy of the recovered images(see Figure~\ref{fig-control} and Figure~\ref{fig-control2}). Moreover, the ultimate goal of our system is the readability of the recovered images, so we also used Optical Character Recognition(OCR) services to evaluate the accuracy. The model with traditional lenses(without optical zoom) is trained and tested at 1~2 meters range, while the one with optical zoom at 5~7.5 meters, at which distance less than 5\% of the characters(only the simplist ones) can be recognized by humans from the photos without the assistance of SR algorithms. The model can achieve an accuracy above 90\% at 1.8m with traditional lenses and 6m with optical zooming lenses. Considering the complexity of Chinese characters, and the assist of context when read by an OCR recognizer, we believe this level of accuracy can provide sufficient data at a shoulder surfing scenario, thus proving the efficiency of our model.
@@ -58,7 +59,7 @@ We train and test other commonly used architectures with the same sets of data a
     \label{table-comp}
 \end{figure}
 
-\section{System Evaluation}
+% \section{System Evaluation}
 \subsection{Accuracy}
 We build the system on smartphone and evaluate its performance in real-life environments. We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it's insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lenses at 1~2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Figure~\ref{table-accuracy}.
 
