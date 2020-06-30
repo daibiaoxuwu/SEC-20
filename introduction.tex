@@ -43,12 +43,10 @@ In this paper, we present \textsf{SRPeek}, an end-to-end system of shoulder surf
   \item \textbf{Complexities of characters.} To make our threat model more applicable for real-life scenarios (e.g., passwords or e-mails), we aim for reconstructing multi-type texts, including Chinese characters, English letters, and numbers. And it poses unique challenges compared with scene or object reconstruction. Composed of multiple strokes, characters are distributed discretely in image space, not known to other entities, e.g. faces and natural objects. In some cases, messing up a stroke will not impact its readability, and in other cases shortening or lengthening a stroke even slightly will lead to a different character, leading to misunderstandings. And unlike most SR applications working on similarity (between their output and the ‘ground truth’), our goal is readability, and the network architecture and training process must be engineered accordingly.\cl{ Another challenge is imbalanced data. Among Chinese characters certain strokes and stroke groups are always more commonplace than others, and this imbalanceness often results in lower prediction accuracy over the less common,  unconventionality shaped characters. On the other hand, however, the focus on characters can also aid us. As our network is only expected to reconstructe these characters, the network can learn to detect features from the input and reconstruct strokes and segments from them, extracting more information from the blurry images.}
 \end{itemize}
 
-\cl{Evaluations can be summarized here (performance and comparison with existing works).}
-
 \vspace{1mm}
 \noindent
 \textbf{Summary of Evaluation Results.}
-
+Equipped with our uniquely designed SR algorithm, our system can help the attacker read the characters shown on the victim's phone with above 90\% accuracy at 2m distance on a smartphone without optical zooming, or 6m distance on a phone with optical zooming in our experimental settings. The system is able to capture photos and produce high-res images constantly with about 2 seconds interval. Our experiments with real life scenarios show that this system is able to decipher texts or passwords of the victim at a safe distance, without alarming the victim, posing a threat to screen privacy.
 
 \vspace{1mm}
 \noindent
