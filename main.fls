@@ -185,9 +185,6 @@ INPUT d:/papers/SEC-20/design.tex
 INPUT d:/papers/SEC-20/./pic/design.pdf
 INPUT ./pic/design.pdf
 INPUT ./pic/design.pdf
-INPUT d:/papers/SEC-20/./pic/patches.jpg
-INPUT ./pic/patches.jpg
-INPUT ./pic/patches.jpg
 INPUT d:/papers/SEC-20/implementation.tex
 INPUT d:/papers/SEC-20/implementation.tex
 INPUT d:/papers/SEC-20/pic/training_single_dataset_1.png
