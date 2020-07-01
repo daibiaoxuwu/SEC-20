@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1593633115 "main.aux" "main.bbl" "main" 1593633118
+["bibtex main"] 1593633115 "main.aux" "main.bbl" "main" 1593633246
   "d:/texlive/2019/texmf-dist/bibtex/bst/base/abbrv.bst" 1564741626 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1593633118 10714 dc212388e0440d4641e157bacdf11405 "pdflatex"
+  "main.aux" 1593633245 10714 dc212388e0440d4641e157bacdf11405 "pdflatex"
   "main.bib" 1593620695 10263 b50b02509d8bf0504d167b09bc91f717 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1593633116 "d:/papers/SEC-20/main.tex" "d:/papers/SEC-20/main.pdf" "main" 1593633119
+["pdflatex"] 1593633244 "d:/papers/SEC-20/main.tex" "d:/papers/SEC-20/main.pdf" "main" 1593633246
   "IEEEtran.cls" 1440654524 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
   "abstract.tex" 1593620695 1102 a5794d0398458f16c3e2ef67ea37d2b2 ""
   "conclusion.tex" 1593568985 1223 91c93c07fba72b68a3b0036606f16312 ""
-  "d:/papers/SEC-20/main.aux" 1593633118 10714 dc212388e0440d4641e157bacdf11405 ""
+  "d:/papers/SEC-20/main.aux" 1593633245 10714 dc212388e0440d4641e157bacdf11405 ""
   "d:/papers/SEC-20/main.tex" 1593567318 2187 3910c75d81ad0c2bd996e6b70ac8df54 ""
   "d:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1564742352 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "d:/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1564742670 3332 103109f5612ad95229751940c61aada0 ""
@@ -120,11 +120,11 @@
   "d:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1564745655 4254430 ed134daf4b4f3373155efd18b8246014 ""
   "d:/texlive/2019/texmf.cnf" 1564745428 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "design.tex" 1593620695 14626 1e813fcde82370e336fb0a687dbc475c ""
-  "evaluation.tex" 1593632876 13540 0ffef47333a0779be73369a26a6c4a12 ""
+  "evaluation.tex" 1593633242 13542 bd6fde6b2e729b384b6225b5e2853e3d ""
   "implementation.tex" 1593624355 12346 ddeeadbf78ed10a8e7f977c12caed10d ""
   "introduction.tex" 1593620695 12462 b5220059f68efd13a1717324d0fd36a4 ""
   "limitation_and_discussion.tex" 1593573736 3518 6796f71ffe649f2b7bd9b446244097c0 ""
-  "main.aux" 1593633118 10714 dc212388e0440d4641e157bacdf11405 "pdflatex"
+  "main.aux" 1593633245 10714 dc212388e0440d4641e157bacdf11405 "pdflatex"
   "main.bbl" 1593633116 7354 32247c572f481a3d7bb18022d3d1f3c9 "bibtex main"
   "main.tex" 1593567318 2187 3910c75d81ad0c2bd996e6b70ac8df54 ""
   "pic/data_1.pdf" 1593626246 2397 820abaf6445dc44001f9565ce713461e ""
@@ -146,8 +146,8 @@
   "related_work.tex" 1593633111 6860 cad4ec4b590701462f14f3bf8319e6b4 ""
   "system_overview.tex" 1593624372 3638 43d2e8b5bebdd6a09285ab65f8b72ee5 ""
   (generated)
-  "main.log"
+  "main.pdf"
+  "main.aux"
   "d:/papers/SEC-20/main.pdf"
   "d:/papers/SEC-20/main.log"
-  "main.aux"
-  "main.pdf"
+  "main.log"
