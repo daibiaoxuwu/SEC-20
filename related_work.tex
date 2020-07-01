@@ -1,20 +1,20 @@
 \section{Related Work}
 \label{sec-related-work}
 \begin{table}[t]
-  \caption{A comparison of state-of-the-art works on shoulder surfing.}
+  \caption{A comparison of the state-of-the-arts on shoulder surfing.}
   \vspace{2mm}
   \begin{center}
   \begin{tabular}{cccc}
   \hline
-   Reference & Equipment & Training & distance$^{\mathrm{a}}$ \\
+   Reference & Scenarios & Training & distance$^{\mathrm{a}}$ \\
   \hline
-  Eiband~\cite{eiband2017understanding}  & naked eye & trained & 1 meter \\
-  Kwon~\cite{kwon2013covert}  & naked eye & untrained  & Intimate$^{\mathrm{b}}$\\
-Schaub~\cite{schaub2012password} & naked eye & untrained & Intimate\\
-  Maggi~\cite{maggi2011poster}  & camera & untrained  & Intimate \\
+  Eiband et al.~\cite{eiband2017understanding}  & naked eye & trained & 1 meter \\
+  Kwon et al.~\cite{kwon2013covert}  & naked eye & untrained  & Intimate$^{\mathrm{b}}$\\
+Schaub et al.~\cite{schaub2012password} & naked eye & untrained & Intimate\\
+  Maggi et al.~\cite{maggi2011poster}  & camera & untrained  & Intimate \\
   \hline
   \hline
-  \textbf{\textsf{SRPeek}} & COTS phones & trained  & 6 meter\\
+  \textbf{\textsf{SRPeek}} & COTS phones & trained  & 1.8 / 6 meter\\
   \hline
   \multicolumn{4}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen.}\\
 
@@ -26,8 +26,8 @@ Schaub~\cite{schaub2012password} & naked eye & untrained & Intimate\\
 
 \subsection{Shoulder Surfing}
 With the arrival of the information era, privacy issues are becoming increasingly prominent. Smartphone screen privacy, the concern of our smartphones being observed by strangers in public areas, or shoulder surfing, have been studied heavily recently~\cite{eiband2017understanding,goucher2011look,kwon2013covert}. To mitigate this threat, some systems hide the information~\cite{brudy2014anyone} or warn the user~\cite{saad2018communicating} once sensing malicious passers-by; others modify the user interfaces, including creating honeypots (for passwords)~\cite{chakraborty2014tag}, confusing unauthorized parties~\cite{wiedenbeck2006design}, and making the interactions invisible~\cite{kumar2007reducing} or unreadable from a distance~\cite{Chun2019Keep}. Most of the works assume that the attacker is a casual passer-by, taking occasional peeks with the naked eye, as is the case most of the time~\cite{eiband2017understanding} ~\cite{wiedenbeck2006design}. Given the assisted equipment, the malicious attacker can however acquire the sensitive information (passwords, business correspondence, etc.) readily to do real harm. To deal with the threat model of tool-assisted shoulder surfing,%\cl{more citation and table 1 row-2},
-% Schaub, et, al. observed the susceptibility of shoulder surfing from the naked eye\cite{schaub2012password}
-Maggi et al. designed an automatic shoulder surfing threat model, observing the target smartphone with a camera~\cite{maggi2011poster}. It can however only function when the attacker is standing at close range, which is a barely practical scenario. By tailoring and fusing the SR technology with smartphones with developed mobile camera module and processing ability, we propose a stronger shoulder surfing threat model in which attackers can deploy it on commercial smartphones while obtaining information for a longer range to reduce suspicion, say 1.5m away from the victim's screen with an observing view of 30$^\circ$ shown in Table~\ref{tbl:comparison}. Evaluations demonstrate its feasibility and privacy concerns in our daily life.
+% Schaub, et, al. observed the susceptibility of shoulder surfing from the naked eye\cite{schaub2012password} 
+Maggi et al. designed an automatic shoulder surfing threat model, observing the target smartphone with a camera~\cite{maggi2011poster}. It can however only function when the attacker is standing at close range, which is a barely practical scenario. By tailoring and fusing the SR technology with smartphones with developed mobile camera module and processing ability, we propose a stronger shoulder surfing threat model in which attackers can deploy it on commercial smartphones while obtaining information for a longer range to reduce suspicion, say 1.8-6m away from the victim's screen with an observing view of 30$^\circ$ shown in Table~\ref{tbl:comparison}. Evaluations demonstrate its feasibility and privacy concerns in our daily life.
 
 \subsection{Super Resolution}
 Image SR is the process of reconstructing an image with a higher spatial resolution. Based on the structural pattern, self-similarity~\cite{suetake2008image}, or previous knowledge of the image genre, the single-image SR techniques take as input a single low-resolution image, rendering a sharp, high-resolution one by deducing missing information and reconstructing the missing pixels. Further, multi-image SR techniques work on a set of pictures on the same scene, such as multiple snapshots captured by a smartphone, successive images from a satellite, or adjacent frames on a video clip. These algorithms collect extra data from slight differences of these redundant images, often exhibiting better performance than single-image SR algorithms. And a variety of techniques have been proposed for the multi-image SR problem. And early works focus on the analysis of images in spatial or frequency domains. For example, the Shift-Add algorithm~\cite{farsiu2003robust} analyzes the spatial information by maximizing the pixel-wise possibility of high-resolution image from low-resolution images. Besides, approaches for the frequency domain rely on the Fourier transform of images. Assuming that the high-resolution scene is band-limited, these algorithms reconstruct high-frequency components from patterns of low-frequency components, removing bands of noise and blur effects simultaneously. Unfortunately, all SR techniques  however, are subject-specific and achieve the best performance only for some contents, including natural photos, scanned text, satellite imaging, biometrics~\cite{Youm2016Image}
