@@ -12,7 +12,7 @@
 % \end{figure*}
 We evaluate the performance of the network model in different training and testing conditions. We perform the following experiments with two COTS smartphones: a Redmi 6A smartphone, with a single rear camera with 13 million pixels and digital zoom only, and a HUAWEI P40 Pro, with multiple rear cameras. The telephoto camera possesss up to 5x optical zooming ability which we will utilize fully in our experiments.
  
-\subsection{Performance In Controlled Environment}
+\subsection{Performance In Controlled Environments}
 In these experiments, we train and test the model with the images captured with exactly the same environment parameters, and used Peak Signal to Noise Ratio to evaluate the accuracy of the recovered images. The results are shown in Figure~\ref{fig-control-1} and Figure~\ref{fig-control-2}. Moreover, the ultimate goal of our system is the readability of the recovered images, so we also used Optical Character Recognition(OCR) services to evaluate the accuracy. The model with traditional lenses (without optical zoom) is trained and tested at 1-2 meters range, while the one with optical zoom at 5-7.5 meters, at which distance less than 5\% of the characters (only the simplest ones) can be recognized by humans from the photos without the assistance of SR algorithms. 
 
 From Figure~\ref{fig-control-1}, we can see the model can achieve an OCR accuracy above 90\% at 1.8m with traditional lenses in both day and night time. The PSNR is higher than 10 as well. The OCR accuracy and PSNR drops in night time since the darker environmental lighting condition as well as with the increasing of distance since the longer distance means more blurs. For Figure~\ref{fig-control-2}, we can see the OCR accuracy is larger than 90\% at 6m with optical zooming lenses. The performance is relatively consistent in both day and night time. Considering the complexity of Chinese characters, and the assist of context when read by an OCR recognizer, we believe this level of accuracy can provide sufficient data at a shoulder surfing scenario, thus proving the efficiency of our model.
@@ -27,7 +27,7 @@ From Figure~\ref{fig-control-1}, we can see the model can achieve an OCR accurac
 
 In the optical zoom group, the accuracy of the model dropped drastically at 7m distance. Increased distances means less data and less restrictions of the possible outputs, which leads to artifacts(missing or misplaced strokes, etc.). It is the nature of Chinese characters that one mistaken stroke will largely affect its readability, leading to the result that while the pixel-wise error rises steadily with the increased distance, the accuracy will experience a drastic drop.
 
-\subsection{Performance In Random Environment}
+\subsection{Performance In Random Environments}
 We train the model with data captured in different environments, as mentioned before, and test its ability in other environments. The results are shown in Figure~\ref{fig-random-1} and Figure~\ref{fig-random-2}. For Figure~\ref{fig-random-1}, the model can still achieve an OCR accuracy above 85\% at 1.8m with traditional lenses. From Figure~\ref{fig-random-2}, the OCR accuracy keeps higher than 90\% at 6m with optical zooming lenses. This verifies the efficiency of our model for environment adaption.
  
 \begin{figure}[!t]
