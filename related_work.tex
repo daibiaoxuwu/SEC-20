@@ -1,30 +1,29 @@
-\begin{table*}[t]
-    \caption{A comparison of state-of-the-art works on shoulder surfing.}
-    \vspace{2mm}
-    \begin{center}
-    \begin{tabular}{ccccc}
-    \hline
-     Reference & Equipment & Training & distance$^{\mathrm{a}}$ \\
-    \hline
-    Eiband~\cite{eiband2017understanding}  & naked eye & trained & 1 meter \\
-    Kwon~\cite{kwon2013covert}  & naked eye & untrained  & Intimate$^{\mathrm{b}}$\\
-Schaub~\cite{schaub2012password} & naked eye & untrained & Intimate\\
-    Maggi~\cite{maggi2011poster}  & camera & untrained  & Intimate \\
-    \hline
-    \hline
-    \textbf{\textsf{SRPeek}} & COTS smartphones & trained  & 1.8m(traditional)\\
-  & & &6m(optical zoom)\\
-    \hline
-    \multicolumn{5}{l}{$^{\mathrm{a}}$The maximum distance and observing view angle to the victim's screen.}\\
-
-    \multicolumn{5}{l}{$^{\mathrm{b}}$The attacker stands next to or behind the victim.}\\
-    \end{tabular}
-    \label{tbl:comparison}
-    \end{center}
-\end{table*}
-
 \section{Related Work}
 \label{sec-related-work}
+\begin{table}[t]
+  \caption{A comparison of state-of-the-art works on shoulder surfing.}
+  \vspace{2mm}
+  \begin{center}
+  \begin{tabular}{cccc}
+  \hline
+   Reference & Equipment & Training & distance$^{\mathrm{a}}$ \\
+  \hline
+  Eiband~\cite{eiband2017understanding}  & naked eye & trained & 1 meter \\
+  Kwon~\cite{kwon2013covert}  & naked eye & untrained  & Intimate$^{\mathrm{b}}$\\
+Schaub~\cite{schaub2012password} & naked eye & untrained & Intimate\\
+  Maggi~\cite{maggi2011poster}  & camera & untrained  & Intimate \\
+  \hline
+  \hline
+  \textbf{\textsf{SRPeek}} & COTS phones & trained  & 6 meter\\
+  \hline
+  \multicolumn{4}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen.}\\
+
+  \multicolumn{4}{l}{$^{\mathrm{b}}$The attacker stands next to or behind the victim.}\\
+  \end{tabular}
+  \label{tbl:comparison}
+  \end{center}
+\end{table}
+
 \subsection{Shoulder Surfing}
 With the arrival of the information era, privacy issues are becoming increasingly prominent. Smartphone screen privacy, the concern of our smartphones being observed by strangers in public areas, or shoulder surfing, have been studied heavily recently~\cite{eiband2017understanding,goucher2011look,kwon2013covert}. To mitigate this threat, some systems hide the information~\cite{brudy2014anyone} or warn the user~\cite{saad2018communicating} once sensing malicious passers-by; others modify the user interfaces, including creating honeypots (for passwords)~\cite{chakraborty2014tag}, confusing unauthorized parties~\cite{wiedenbeck2006design}, and making the interactions invisible~\cite{kumar2007reducing} or unreadable from a distance~\cite{Chun2019Keep}. Most of the works assume that the attacker is a casual passer-by, taking occasional peeks with the naked eye, as is the case most of the time~\cite{eiband2017understanding} ~\cite{wiedenbeck2006design}. Given the assisted equipment, the malicious attacker can however acquire the sensitive information (passwords, business correspondence, etc.) readily to do real harm. To deal with the threat model of tool-assisted shoulder surfing,%\cl{more citation and table 1 row-2},
 % Schaub, et, al. observed the susceptibility of shoulder surfing from the naked eye\cite{schaub2012password}
