@@ -88,15 +88,14 @@ We test the success rate of obtaining crucial information when the observed part
 
 \begin{table}[] 
 \centering
-\begin{tabular}{@{}lllll@{}}
+\begin{tabular}{@{}ccccc@{}}
 	\toprule
-Scenario & Read text & Type text & Enter PIN & Enter password\\ \midrule
-\begin{tabular}[c]{@{}l@{}}Human\\ Recognition\\ Accuracy\\(raw image)\end{tabular} & 5 & 0 & 0 & 0\\ \\
-Accuracy & 100 & 100 & - & -\\ \\
-\begin{tabular}[c]{@{}l@{}}Accuracy\\ per character\end{tabular}& - & - & 100 & 80\\ \bottomrule
+Accuracy & Read text & Type text & Enter PIN & Enter password\\ \midrule
+raw image & 5 & 0 & 0 & 0\\ \\
+SRPeek & 100 & 100 & 100 & 80\\ \bottomrule
 \end{tabular}
 
-\caption{Success rate in different tasks}
+\caption{Success rate in different tasks.}
 \label{table-task}
 \end{table}
 
