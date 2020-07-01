@@ -272,24 +272,24 @@ set(fig,'PaperSize',[6.8 3.8]);
 %% data_7
 x=[1,2,3];
 human_acc_processed=[95,85,70];
-ocr_acc=[100,10,23];
-human_acc_raw=[5,0.1,0.1];
+ocr_raw_acc=[100,10,23;5,0.1,0.1];
 
 h=plot(x,human_acc_processed);
 h.LineStyle=lineA(1);
 h.Color=left_color;
 h.Marker=lineC(1);
-h.LineWidth=2;
+h.LineWidth=1;
 
 hold on;
-h=plot(x,ocr_acc);
-h.LineStyle=lineA(2);
-h.Color=right_color;
-h.Marker=lineC(2);
-h.LineWidth=2;
-
+b=bar(x,ocr_acc,'FaceColor',right_color);
 hold on;
-b=bar(x,human_acc_raw,'FaceColor','g');
+c=bar(x,human_acc_raw,'FaceColor','g');
+
+b = bar(y,'FaceColor','flat');
+for k = 1:size(y,2)
+    b(k).CData = k;
+end
+% b.CData=lineB(1);
 
 ylabel('Recognition Accuracy(%)'); % y label
 % legend(['Toward (-1)'],['Static (0)'])

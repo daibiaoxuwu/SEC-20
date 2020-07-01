@@ -40,23 +40,30 @@ As a result of these observations, we have to collect images in varied environme
 
 As the experiment goes on, the attacker phone will keep on taking photos in burst mode (20 photos per time), and the victim phone will change the characters it is displaying at a fixed interval, when approximately 100 images were taken by the attacker. We change the environmental setting whenever about 2k photos were taken, relocating the phones (while keeping their distance between 1 and 2 meters) or modifying the angle of the phones. The attacker will always point its phone directly at the victim, keeping its screen in the middle of the photos; The victim, however, may tilt its phone at an angle within 30 degrees. We then readjust the focus and aperture of the attacker's phone to maximize the image quality before continuing data collection. Screenshots were taken in the victim's phone each time it changes its display, and these screenshots are scaled, spun and deformed according to the distance and angle between the phones at the time, and used as ground truth for training and evaluation.
 \begin{figure}
-  \centering
-     \centering
-     \subfigure[Experiment setting. Distance between phones are shortened for demonstration.]{
-         \includegraphics[width=0.5\textwidth]{pic/exp1.jpg}
-         \label{fig-exp1}
-         }
-   \subfigure[screenshot from attacker's phone(SRPeek system).]{
-         \includegraphics[width=0.5\textwidth]{pic/exp2.jpg}
-         \label{fig-exp2}
-         }
-   \subfigure[screenshot from victim's phone.]{
-         \includegraphics[width=0.5\textwidth]{pic/exp3.jpg}
-         \label{fig-exp3}
-         }
-     \caption{Illustration of our experimental setting.}
-     \label{fig-experiment}
+	\centering
+	\includegraphics[width=0.48\textwidth]{pic/setup.pdf}
+    \caption{Illustration of our experimental setting (Distance between phones are shortened for demonstration).}
+	\label{illustration_of_system}
 \end{figure}
+% \begin{figure}
+%   \centering
+%      \centering
+%      \subfigure[Experiment setting. Distance between phones are shortened for demonstration.]{
+%          \includegraphics[width=0.5\textwidth]{pic/exp1.jpg}
+%          \label{fig-exp1}
+%          }
+%    \subfigure[screenshot from attacker's phone(SRPeek system).]{
+%          \includegraphics[width=0.5\textwidth]{pic/exp2.jpg}
+%          \label{fig-exp2}
+%          }
+%    \subfigure[screenshot from victim's phone.]{
+%          \includegraphics[width=0.5\textwidth]{pic/exp3.jpg}
+%          \label{fig-exp3}
+%          }
+%      \caption{Illustration of our experimental setting.}
+%      \label{fig-experiment}
+% \end{figure}
+
 The data was collected indoors, as is often the case of shoulder-surfing in public areas (theaters, subways, offices, etc.). We perform the experiment in a room with a window and repeat the data collection phase in different times of the day and night, with curtains drawn or open, lights turned on and off to modify the illumination parameter. The position of the phones is also a crucial factor in this parameter, and we avoid extreme settings, e.g. having the sunlight directly shining on the screen. We collected 800,000 images in this way with a Redmi6A phone (which possess a camera with 130 million pixels). This process is extremely time-consuming, but the data amount is crucial in our experiment, as slight variations of the environment will cause drastic changes in the features extracted from the characters, and only by covering the variations in each of the environmental parameters in the training data can the system successfully function in different scenarios.
 
 \subsection{Model Specifications}
