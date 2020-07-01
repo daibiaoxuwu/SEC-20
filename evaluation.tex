@@ -67,25 +67,30 @@ We train the model with fewer groups of data, exposing it to fewer variations of
 We observed that variations in light and angle parameter in training data is crucial to a robust model. Variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process.
 
 \subsection{Comparison with other architectures}
-We train and test other commonly used architectures with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, and applied it to each single image before merging the results by pixel-level averageing. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution(VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noized and deformed patterns, while VideoSR approaches rely apon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lenses' group of data for testing. The results are shown in Figure~\ref{table-comp}.
+We train and test other commonly used architectures with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, and applied it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution(VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lenses' group of data for testing. The results are shown in Table~\ref{table-comp}.
 \begin{table}[!t]
     \centering
+    \caption{Comparison with existing systems.}
     \begin{tabular}{@{}cccc@{}}
         \toprule
     System & SRPeek & SRCNN & VideoSR \\ \midrule
     PSNR(db) & 13.32 & 7.69 & 8.403\\ 
     OCR Accuracy(\%) & 100 & 10 & 23\\ \bottomrule
     \end{tabular}
-    \caption{Comparison with existing systems.}
     \label{table-comp}
 \end{table}
 
+We can see that the PSNR of SRPeek is 13.32dB which 73.2\% and 58.6\% larger than that of SRCNN and VideoSR. For the OCR accuracy, SRPeek can recognize all characters, but SRCNN and VideoSR can only recognize 10\% and 23\% of them. The results show the efficiency of our SR model in comparison with existing models.
+
 % \section{System Evaluation}
 \subsection{Accuracy}
-We build the system on smartphone and evaluate its performance in real-life environments. We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it's insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lenses at 1~2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Figure~\ref{table-scenarios}.
+We build the system on smartphone and evaluate its performance in real-life environments. We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it is insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lenses at 1-2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
+
+The results show that Human can read 95\%, 85\% and 70\% contents in home, transport and theater while the OCR accuracy is 100\%, 10\% and 23\%. That verifies human can obtain the most parts of informations from the peeking in various environments. In transport, the vibration of smartphone and the darker environment can fool the OCR model for content recognition in comparison with human recognition so that leads lower accuracy in transport and theater.
 
 \begin{table}[!t]
     \centering
+    \caption{Recognition accuracy in various scenarios.}
     \begin{tabular}{@{}cccc@{}}
         \toprule
     Scenarios & Home & Transport & Theater \\ \midrule
@@ -94,16 +99,16 @@ We build the system on smartphone and evaluate its performance in real-life envi
     OCR & 100 & 10 & 23\\ 
     Human & 95 & 85 & 70\\ \bottomrule
     \end{tabular}
-    \caption{Recognition accuracy in various scenarios.}
     \label{table-scenarios}
 \end{table}
 
 \subsection{Influence of hand tremors}
 We ask 5 participants to capture images with handheld smartphones, keeping their hand still to their greatest effort(Handheld camera). We process these images and let them read the results. We compare this performance to the data collected on stationary phones to evaluate the influence of hand tremors.
-We also ask participants to hold a smartphone in their hands and read a piece of text, without other additional instructions(Handheld target). The user may freely interact with the phone when reading. We capture images of the phone at the same time to see how our system deal with a moving target screen.The results are shown in Figure~\ref{table-tremor}.
+We also ask participants to hold a smartphone in their hands and read a piece of text, without other additional instructions(Handheld target). The user may freely interact with the phone when reading. We capture images of the phone at the same time to see how our system deal with a moving target screen.The results are shown in Table~\ref{table-tremor}.
 
 \begin{table}[!t] 
     \centering
+    \caption{Impact of hand tremors while holding various items.}
     \begin{tabular}{ccccc}
         \toprule
     Items & None & Camera & Target & Both  \\
@@ -113,16 +118,15 @@ We also ask participants to hold a smartphone in their hands and read a piece of
     OCR & 95 & 85 & 80 & 80\\ 
     Human & 95 & 85 & 80 & 85\\ \bottomrule
     \end{tabular}
-    \caption{Impact of hand tremors while holding various items.}
     \label{table-tremor}
 \end{table}
 
-We conclude from the results that hand tremors can impact the performance of our system. Although the edges of the phone are notable marks for image alignment, small shifts in the sub-pixel level will cause blurriness in the results of the networks, lowering the readability of the outputs. 
+We can see when tremors happen, the recognition accuracy drops from 95\% to 85\%/80\% for both OCR tools and human. We conclude from the results that hand tremors can impact the performance of our system. Although the edges of the phone are notable marks for image alignment, small shifts in the sub-pixel level will cause blurriness in the results of the networks, lowering the readability of the outputs. 
 
 \begin{figure}[!t]
     \centering
-    \subfigure{\includegraphics[width=0.36\textwidth]{./pic/data_5.pdf}\label{fig-image-tranditional-2}}
-    \subfigure{\includegraphics[width=0.36\textwidth]{./pic/data_6.pdf}\label{fig-image-optical-2}}
+    \subfigure[Traditional Lens]{\includegraphics[width=0.36\textwidth]{./pic/data_5.pdf}\label{fig-image-tranditional-2}}
+    \subfigure[Optical Lens]{\includegraphics[width=0.36\textwidth]{./pic/data_6.pdf}\label{fig-image-optical-2}}
     \hfill
     \caption{Performance with various processing images using Traditional Lens and Optical Lens.}
     \label{fig:adapting}
