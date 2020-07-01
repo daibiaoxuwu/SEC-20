@@ -53,13 +53,14 @@ We compare the results to discover the influence of the surrounding environment:
 % \end{figure*}
 
 \subsection{Adapting Ability}
-We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model's performance in other environments. The results are shown in Figure~\ref{fig-adapt-tranditional}. Only the results from the traditional lenses is shown, as the optical zoom lenses group face longer distances and more complex distortions, and with incomplete data the model fails to manage any reasonable reconstruction on the test dataset, resulting in extremely low accuracy in all experiments.
+We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model's performance in other environments. The results are shown in Figure~\ref{fig-adapt-tranditional}.
+
 \begin{figure}[!t]
     \centering
-    \subfigure{\includegraphics[width=0.36\textwidth]{./pic/data_3.pdf}\label{fig-adapt-tranditional}}
+    \subfigure[Traditional Lens]{\includegraphics[width=0.36\textwidth]{./pic/data_3.pdf}\label{fig-adapt-tranditional}}
     \subfigure{\includegraphics[width=0.36\textwidth]{./pic/data_4.pdf}\label{fig-adapt-optical}}
     \hfill
-    \caption{Performance for Adapting Ability using Traditional Lens and Optical Lens.}
+    \caption[Optical Lens]{Performance for Adapting Ability using Traditional Lens and Optical Lens.}
     \label{fig:adapting}
 \end{figure}
 
@@ -132,7 +133,7 @@ We can see when tremors happen, the recognition accuracy drops from 95\% to 85\%
 \end{figure}
 
 \subsection{Success rate in different tasks}
-We test the success rate of obtaining crucial information when the observed participant perform several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters. The observed participant will turn off the screen of his phone as soon as he/she finishes the task, while the observing participant will observe through our APP, constantly capturing images and processing them to display a real-time and magnified view of the observed phone. For the first two tasks,we ask the observing participant several questions to test if he/she have collected the vital information(e.g. the name or the location mentioned in the text). For the task of recognizing PIN and passwords, we use accuracy per character as a supplementary evaluation metric. In these two scenarios, we ignore the virtual keyboard and view only the textbox, assuming that the last character of the entered string is always visible. Less photos will be avaliable for each character but decifering English characters is also easier than Chinese characters, and we trained a model specifically for each task(with the same nerual network architecture), the training images containing only English characters and numbers(or only numbers for the PIN entry scenario). The results are shown in Table~\ref{table-task}.
+We test the success rate of obtaining crucial information when the observed participant perform several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters. The observed participant will turn off the screen of his phone as soon as he/she finishes the task, while the observing participant will observe through our APP, constantly capturing images and processing them to display a real-time and magnified view of the observed phone. For the first two tasks, we ask the observing participant several questions to test if he/she have collected the vital information(e.g. the name or the location mentioned in the text). For the task of recognizing PIN and passwords, we use accuracy per character as a supplementary evaluation metric. In these two scenarios, we ignore the virtual keyboard and view only the textbox, assuming that the last character of the entered string is always visible. Less photos will be available for each character but decipfering English characters is also easier than Chinese characters, and we trained a model specifically for each task(with the same neural network architecture), the training images containing only English characters and numbers(or only numbers for the PIN entry scenario). The results are shown in Table~\ref{table-task}.
 
 \begin{table}[!t]
 \centering
