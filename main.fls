@@ -210,9 +210,9 @@ INPUT ./pic/workflow.pdf
 INPUT ./pic/workflow.pdf
 INPUT d:/papers/SEC-20/design.tex
 INPUT d:/papers/SEC-20/design.tex
-INPUT d:/papers/SEC-20/./pic/design.pdf
-INPUT ./pic/design.pdf
-INPUT ./pic/design.pdf
+INPUT d:/papers/SEC-20/./pic/network.pdf
+INPUT ./pic/network.pdf
+INPUT ./pic/network.pdf
 INPUT d:/papers/SEC-20/implementation.tex
 INPUT d:/papers/SEC-20/implementation.tex
 INPUT d:/papers/SEC-20/pic/training_single_dataset_1.png
