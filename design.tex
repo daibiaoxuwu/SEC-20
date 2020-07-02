@@ -40,13 +40,13 @@ Presently, in these layers nothing is done to raise the resolution of the images
 
 we upsample the input images $x_i^{(0)}$ simultaneously to keep the two inputs of the following layers $H_l(x_i^{(l-1)},x_i^{(0)})$ unanimous in resolution. For example, in a 4$\times$ SR network with five layers, we may insert 2 2$\times$ nearest upsampling layers behind the 2nd and 4th layer.
 
-Inside each layer $H_l$ there are 3 convolution layers $Conv_{1l}(\cdot)$, $Conv_{2l}(\cdot)$, $Conv_{3l}(\cdot)$ and 1 merging layer $Merge_l(\cdot)$.
+Illustrated in Figure~\ref{fig-system}, inside each layer $H_l$ there are 3 convolution layers $Conv_{1l}(\cdot)$, $Conv_{2l}(\cdot)$, $Conv_{3l}(\cdot)$ and 1 merging layer $Merge_l(\cdot)$.
 
 %\cl{$H(\cdot)$ or $H(\cdot,\cdot)$?}
 \begin{figure}
     \centering
        \includegraphics[width=0.5\textwidth]{./pic/network.pdf}
-       \caption{Network Architecture of SRPeek.}
+       \caption{Core network architecture of SRPeek.}
        \label{fig-system}
    \end{figure}   
 
@@ -106,8 +106,6 @@ where (p,q) represent the pixel at this coordinate, and $k_t$ is a set of fixed 
         y &= Conv'_{L}(\{e_{tr}^{(L)},t\le T,r\le R\} )\\
 \end{split}
 \end{equation}
-
-The full structure of a 3-layer network is shown in Figure~\ref{fig-system}.
 
 % \subsection{Design Principal}
 % To solve the challenges and outperform the state-of-the-arts for this new shoulder surfing attack, we propose a holistic system with the multi-frame SR neural network, illustrated in Figure~\ref{fig-workflow}.
