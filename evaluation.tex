@@ -78,7 +78,7 @@ We train the model with fewer groups of data, exposing it to fewer variations of
     \label{fig:adapting}
 \end{figure}
 
-We observed that variations in light and angle parameter in training data is crucial to a robust model. Variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process.
+We observed that variations in light and angle parameter in training data is crucial to a robust model. In the tradition lens group, variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process. The optical lens group yields similar results except the distance group. As the distance between phones are increased to 6 meters, increases in distance leads to greater complexity of image blurriness and less information, so that the model becomes more sensitive to distance changes.
 
 \subsection{Comparison with other architectures}
 We train and test other commonly used architectures with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, and applied it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution(VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.
@@ -98,8 +98,16 @@ We can see that the PSNR of SRPeek is 13.32dB which 73.2\% and 58.6\% larger tha
 
 % \section{System Evaluation}
 \section{Case Study}
+\label{case-study}
 \subsection{Accuracy}
-We build the system on smartphone and evaluate its performance in real-life environments. We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it is insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lens at 1-2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
+
+We build the system on smartphone and evaluate its performance in real-life environments(shown in Fig.~\ref{fig-reallife}). We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it is insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lens at 1-2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.48\textwidth]{pic/reallife.jpg}
+    \caption{Illustration of our real-life scenario (Distance between attacker and victim is shortened for demonstration).}
+	\label{fig-reallife}
+\end{figure}
 
 The results show that Human can read 95\%, 85\% and 70\% contents in home, transport and theater while the OCR accuracy is 100\%, 10\% and 23\%. That verifies human can obtain the most parts of informations from the peeking in various environments. In transport, the vibration of smartphone and the darker environment can fool the OCR model for content recognition in comparison with human recognition so that leads lower accuracy in transport and theater.
 
