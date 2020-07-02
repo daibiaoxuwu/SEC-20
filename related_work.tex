@@ -6,19 +6,19 @@
   \begin{center}
   \begin{tabular}{ccccc}
   \hline
-   Reference & Scenarios   & Accuracy & \begin{tabular}[c]{@{}l@{}}Quantitative \\ Model\end{tabular}& Distance$^{\mathrm{a}}$ \\
+   Reference & Scenarios   & Metric & \begin{tabular}[c]{@{}l@{}}Quantitative \\ Model\end{tabular}& Distance$^{\mathrm{a}}$ \\
   \hline
-  Eiband et al.~\cite{eiband2017understanding}  & naked eye & no & no & 1 meter \\
-  Kwon et al.~\cite{kwon2013covert}  & naked eye & no & no &-$^{\mathrm{b}}$\\
-Schaub et al.~\cite{schaub2012password} & naked eye & no & no & -\\
-  Maggi et al.~\cite{maggi2011poster}  & camera & yes  & no &- \\
+  Eiband~\cite{eiband2017understanding}  & Naked eye & $\times$ & $\times$ & 1m \\
+  Kwon~\cite{kwon2013covert}  & Naked eye & $\times$ & $\times$ &-$^{\mathrm{b}}$\\
+Schaub~\cite{schaub2012password} & Naked eye & \cmark & $\times$ & -\\
+  Maggi~\cite{maggi2011poster}  & Camera & \cmark  & $\times$ &- \\
   \hline
   \hline
-  \textbf{\textsf{SRPeek}} & COTS phones & yes & yes  & 1.8 / 6 meter\\
+  \textbf{\textsf{SRPeek}} & COTS phones & \cmark & \cmark  & 1.8 / 6m\\
   \hline
-  \multicolumn{5}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen.}\\
+  \multicolumn{5}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen. $^{\mathrm{b}}$The attacker stands}\\
 
-  \multicolumn{5}{l}{$^{\mathrm{b}}$Distance is uncontrolled; The attacker stands next to or behind the victim.}\\
+  \multicolumn{5}{l}{next to the victim without the maximum effective distance.}\\
   \end{tabular}
   \label{tbl:comparison}
   \end{center}
