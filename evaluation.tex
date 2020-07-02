@@ -29,6 +29,9 @@ This model can achieve an OCR accuracy above 90\% at 1.8m with traditional lens 
 In the optical zoom group, the accuracy of the model dropped drastically at 7m distance. Increased distances mean less data and less restrictions of the possible outputs, which leads to artifacts (missing or misplaced strokes, etc.). It is the nature of Chinese characters that one mistaken stroke will largely affect its readability, leading to the result that while the pixel-wise error rises steadily with the increased distance, the accuracy will experience a drastic drop.
 
 \subsection{Performance In Random Environments}
+We train the model with data captured in different environments, as mentioned before, and test its ability in other environments. The results are shown in Figure~\ref{fig-random-1} and Figure~\ref{fig-random-2}. For Figure~\ref{fig-random-1}, the model can still achieve an OCR accuracy above 85\% at 1.8m with traditional lens. From Figure~\ref{fig-random-2}, the OCR accuracy keeps higher than 90\% at 6m with optical lens. This verifies the efficiency of our model for environment adaption.
+
+We compare the results to discover the influence of the surrounding environment: The model performs best in daytime and weaker illumination may decrease its ability. Also, the model performs better at closer distances. As the model is trained initially on the 5m group data, it performs especially well at this distance, while the accuracy at other distances experience certain levels of decrease. Also, similar to the experiments at controlled environments, random artifacts start to encompass OCR compensation, rendering the result images highly unreadable, until at 7.5m distance only the simplest characters can escape from being flooded by noise.
 \begin{figure}[!t]
     \centering
     \subfigure[Traditional Lens]{\includegraphics[width=0.40\textwidth]{./pic/data_2.pdf}\label{fig-random-1}}
@@ -37,10 +40,6 @@ In the optical zoom group, the accuracy of the model dropped drastically at 7m d
     \caption{Performance in the random environment using traditional lens and optical Lens.}
     \label{fig:control}
 \end{figure}
-
-We train the model with data captured in different environments, as mentioned before, and test its ability in other environments. The results are shown in Figure~\ref{fig-random-1} and Figure~\ref{fig-random-2}. For Figure~\ref{fig-random-1}, the model can still achieve an OCR accuracy above 85\% at 1.8m with traditional lens. From Figure~\ref{fig-random-2}, the OCR accuracy keeps higher than 90\% at 6m with optical lens. This verifies the efficiency of our model for environment adaption.
-
-We compare the results to discover the influence of the surrounding environment: The model performs best in daytime and weaker illumination may decrease its ability. Also, the model performs better at closer distances. As the model is trained initially on the 5m group data, it performs especially well at this distance, while the accuracy at other distances experience certain levels of decrease. Also, similar to the experiments at controlled environments, random artifacts start to encompass OCR compensation, rendering the result images highly unreadable, until at 7.5m distance only the simplest characters can escape from being flooded by noise.
 
 % \begin{figure*}[!t]
 %     \centering
@@ -55,6 +54,9 @@ We compare the results to discover the influence of the surrounding environment:
 
 
 \subsection{Performance with fewer available images}
+As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, the only limitation being that these images are snapshots of the same scene. This design is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry, where only the last character of the password is visible. We evaluated the impact of fewer available images to the performance of the SR model. The results are shown in fig.~\ref{fig:number}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
+
+In the tradition lens group the performance of the model drops dramatically with fewer than 10 images, indicating that not enough input information is available to rule out all possibilities of the displayed characters. The optical lens group displayed a steady decent of accuracy when fewer images are available, which is expected, as the blur patterns are more complex and the differences between frames more pronounced, so that the images are more precious to the model and contain less overlapping data, and removing any of them will cause losses in accuracy.
 \begin{figure}[!t]
     \centering
     \subfigure[Traditional Lens]{\includegraphics[width=0.40\textwidth]{./pic/data_5.pdf}\label{fig-image-tranditional-2}}
@@ -63,13 +65,11 @@ We compare the results to discover the influence of the surrounding environment:
     \caption{Performance with fewer available images using traditional lens and optical lens.}
     \label{fig:number}
 \end{figure}
-As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, the only limitation being that these images are snapshots of the same scene. This design is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry, where only the last character of the password is visible. We evaluated the impact of fewer available images to the performance of the SR model. The results are shown in fig.~\ref{fig:number}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
-
-In the tradition lens group the performance of the model drops dramatically with fewer than 10 images, indicating that not enough input information is available to rule out all possibilities of the displayed characters. The optical lens group displayed a steady decent of accuracy when fewer images are available, which is expected, as the blur patterns are more complex and the differences between frames more pronounced, so that the images are more precious to the model and contain less overlapping data, and removing any of them will cause losses in accuracy.
 
 \subsection{Adapting Ability}
 We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model's performance in other environments. The results are shown in Figure~\ref{fig:adapting}.
 
+We observed that variations in light and angle parameter in training data is crucial to a robust model. In the tradition lens group, variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process. The optical lens group yields similar results except the distance group. As the distance between phones are increased to 6 meters, increases in distance leads to greater complexity of image blurriness and less information, so that the model becomes more sensitive to distance changes.
 \begin{figure}[!t]
     \centering
     \subfigure[Traditional Lens]{\includegraphics[width=0.40\textwidth]{./pic/data_3.pdf}\label{fig-adapt-tranditional}}
@@ -78,8 +78,6 @@ We train the model with fewer groups of data, exposing it to fewer variations of
     \caption{Performance for the adapting ability using traditional lens and optical lens.}
     \label{fig:adapting}
 \end{figure}
-
-We observed that variations in light and angle parameter in training data is crucial to a robust model. In the tradition lens group, variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process. The optical lens group yields similar results except the distance group. As the distance between phones are increased to 6 meters, increases in distance leads to greater complexity of image blurriness and less information, so that the model becomes more sensitive to distance changes.
 
 \subsection{Comparison with other architectures}
 We train and test other commonly used architectures with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, and applied it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution (VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.

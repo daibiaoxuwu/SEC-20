@@ -212,13 +212,13 @@ INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm
-INPUT d:/papers/SEC-20/system_overview.tex
-INPUT d:/papers/SEC-20/system_overview.tex
+INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
-INPUT d:/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT d:/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT d:/papers/SEC-20/system_overview.tex
+INPUT d:/papers/SEC-20/system_overview.tex
 INPUT d:/papers/SEC-20/./pic/workflow_cl.pdf
 INPUT ./pic/workflow_cl.pdf
 INPUT ./pic/workflow_cl.pdf
