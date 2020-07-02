@@ -4,21 +4,21 @@
   \caption{A comparison of the state-of-the-arts on shoulder surfing.}
   \vspace{2mm}
   \begin{center}
-  \begin{tabular}{cccc}
+  \begin{tabular}{ccccc}
   \hline
-   Reference & Scenarios & Training & distance$^{\mathrm{a}}$ \\
+   Reference & Scenarios   & Accuracy & \begin{tabular}[c]{@{}l@{}}Quantitative \\ Model\end{tabular}& Distance$^{\mathrm{a}}$ \\
   \hline
-  Eiband et al.~\cite{eiband2017understanding}  & naked eye & trained & 1 meter \\
-  Kwon et al.~\cite{kwon2013covert}  & naked eye & untrained  & Intimate$^{\mathrm{b}}$\\
-Schaub et al.~\cite{schaub2012password} & naked eye & untrained & Intimate\\
-  Maggi et al.~\cite{maggi2011poster}  & camera & untrained  & Intimate \\
+  Eiband et al.~\cite{eiband2017understanding}  & naked eye & no & no & 1 meter \\
+  Kwon et al.~\cite{kwon2013covert}  & naked eye & no & no &-$^{\mathrm{b}}$\\
+Schaub et al.~\cite{schaub2012password} & naked eye & no & no & -\\
+  Maggi et al.~\cite{maggi2011poster}  & camera & yes  & no &- \\
   \hline
   \hline
-  \textbf{\textsf{SRPeek}} & COTS phones & trained  & 1.8 / 6 meter\\
+  \textbf{\textsf{SRPeek}} & COTS phones & yes & yes  & 1.8 / 6 meter\\
   \hline
-  \multicolumn{4}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen.}\\
+  \multicolumn{5}{l}{$^{\mathrm{a}}$The maximum distance to the victim's screen.}\\
 
-  \multicolumn{4}{l}{$^{\mathrm{b}}$The attacker stands next to or behind the victim.}\\
+  \multicolumn{5}{l}{$^{\mathrm{b}}$Distance is uncontrolled; The attacker stands next to or behind the victim.}\\
   \end{tabular}
   \label{tbl:comparison}
   \end{center}
