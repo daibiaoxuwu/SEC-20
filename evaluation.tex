@@ -88,8 +88,8 @@ We train and test other commonly used architectures with the same sets of data a
     \begin{tabular}{@{}cccc@{}}
         \toprule
     System & SRPeek & SRCNN & VideoSR \\ \midrule
-    PSNR(db) & 13.32 & 7.69 & 8.403\\ 
-    OCR Accuracy(\%) & 100 & 10 & 23\\ \bottomrule
+    PSNR & 13.32db & 7.69db & 8.403db\\ 
+    OCR Accuracy & 100\% & 10\% & 23\%\\ \bottomrule
     \end{tabular}
     \label{table-comp}
 \end{table}
@@ -117,10 +117,10 @@ The results show that Human can read 95\%, 85\% and 70\% contents in home, trans
     \begin{tabular}{@{}cccc@{}}
         \toprule
     Scenarios & Home & Transport & Theater \\ \midrule
-    Baseline & 5 & 0 & 0\\ 
+    Baseline & 5\% & 0 & 0\\ 
     \midrule
-    OCR & 100 & 10 & 23\\ 
-    Human & 95 & 85 & 70\\ \bottomrule
+    OCR & 100\% & 10\% & 23\%\\ 
+    Human & 95\% & 85\% & 70\%\\ \bottomrule
     \end{tabular}
     \label{table-scenarios}
 \end{table}
@@ -131,15 +131,15 @@ We also ask participants to hold a smartphone in their hands and read a piece of
 
 \begin{table}[!t] 
     \centering
-    \caption{Impact of hand tremors when the camera(attacker phone) and/or target(victim phone) is handheld.}
+    \caption{Impact of hand tremors when the camera (attacker phone) and/or target (victim phone) is handheld.}
     \begin{tabular}{ccccc}
         \toprule
-    Items & None & Camera & Target & Both  \\
+    Accuracy & None & Camera & Target & Both  \\
     \midrule
-    Baseline & 5 & 0 & 5& 5\\ 
+    Baseline & 5\% & 0 & 5\% & 5\%\\ 
     \midrule
-    OCR & 95 & 85 & 80 & 80\\ 
-    Human & 95 & 85 & 80 & 85\\ \bottomrule
+    OCR & 95\% & 85\% & 80\% & 80\%\\ 
+    Human & 95\% & 85\% & 80\% & 85\%\\ \bottomrule
     \end{tabular}
     \label{table-tremor}
 \end{table}
@@ -157,8 +157,8 @@ We test the success rate of obtaining crucial information when the observed part
 \begin{tabular}{@{}ccccc@{}}
 	\toprule
 Accuracy & Read text & Type text & Enter PIN & Enter password\\ \midrule
-Raw Image & 5 & 0 & 0 & 0\\
-SRPeek & 100 & 100 & 100 & 80\\ \bottomrule
+Raw Image & 5\% & 0 & 0 & 0\\
+SRPeek & 100\% & 100\% & 100\% & 80\%\\ \bottomrule
 \end{tabular}
 
 \end{table}
