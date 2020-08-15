@@ -5,7 +5,7 @@
 To solve the challenges and outperform the state-of-the-arts for this new shoulder surfing attack, we propose a holistic system with the multi-frame SR neural network, illustrated in Figure~\ref{fig-workflow}.
 %\cl{These four parts are too long, try to whittle it away to half its length. Refer to the revised contents for challenges in Section introduction.}
 
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
     \item \textbf{Layered architecture and frequent introduction of input.} In our architecture all input images are processed simultaneously and separately, with the information from other images for reference, throughout the network. The initial input images are introduced into the dataflow at each layer, from beginning to end, forming a model with uneven depth, acting as an anchor for the reconstruction process so that the output will be faithful to truth from beginning to end, while preserving the deep mainstream of the model to be able to process such blurry images.
     \item \textbf{Merging layers to adapt multiple frames.} A merging process inside each layer functions as the revenue of communication across images integrates information from all the images into one, the result of which is then stacked with each image for the next convolution. At each layer the image is exposed to the consensuses of features from other images at the same level of complexity, acting as a verification for the hypothetical features extracted from the current image, so that in the training process more audacious features can be learned and proposed without fear of punishment from the final loss, increasing the quality of featuremaps throughout the network.
     \item \textbf{Inconsistency problem, model Complexity and adaption for variable input.} To counter the lack of consistency between frames, all the convolutional layers throughout the network are performed individually for each image with the same set of parameters. This not only reduces parameter count and calculation power, but also avoids reliance on consistency between neighboring frames. Furthermore, this allows variations in the number of input images.
@@ -45,7 +45,7 @@ Illustrated in Figure~\ref{fig-system}, inside each layer $H_l$ there are 3 conv
 %\cl{$H(\cdot)$ or $H(\cdot,\cdot)$?}
 \begin{figure}
     \centering
-       \includegraphics[width=0.5\textwidth]{./pic/network.pdf}
+       \includegraphics[width=0.90\linewidth]{./pic/network.pdf}
        \caption{Core network architecture of SRPeek.}
        \label{fig-system}
    \end{figure}   
