@@ -21,19 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{eiband2017understanding}
-M.~Eiband, M.~Khamis, E.~Von~Zezschwitz, H.~Hussmann, and F.~Alt,
-  ``Understanding shoulder surfing in the wild: Stories from users and
-  observers,'' in \emph{Proceedings of the 2017 CHI Conference on Human Factors
-  in Computing Systems}, 2017, pp. 4254--4265.
-
-\bibitem{Polotiko2017leakage}
-\BIBentryALTinterwordspacing
-Polotiko, ``Aguirre furious at photo leak of private text message,'' 2017.
-  [Online]. Available:
-  \url{https://politics.com.ph/aguirre-furious-photo-leak-private-text-message/}
-\BIBentrySTDinterwordspacing
-
 \bibitem{wiedenbeck2006design}
 S.~Wiedenbeck, J.~Waters, L.~Sobrado, and J.-C. Birget, ``Design and evaluation
   of a shoulder-surfing resistant graphical password scheme,'' in
@@ -50,6 +37,19 @@ A.~Papadopoulos, T.~Nguyen, E.~Durmus, and N.~Memon, ``Illusionpin:
 M.~Kumar, T.~Garfinkel, D.~Boneh, and T.~Winograd, ``Reducing shoulder-surfing
   by using gaze-based password entry,'' in \emph{Proceedings of the 3rd
   symposium on Usable privacy and security}, 2007, pp. 13--19.
+
+\bibitem{eiband2017understanding}
+M.~Eiband, M.~Khamis, E.~Von~Zezschwitz, H.~Hussmann, and F.~Alt,
+  ``Understanding shoulder surfing in the wild: Stories from users and
+  observers,'' in \emph{Proceedings of the 2017 CHI Conference on Human Factors
+  in Computing Systems}, 2017, pp. 4254--4265.
+
+\bibitem{Polotiko2017leakage}
+\BIBentryALTinterwordspacing
+Polotiko, ``Aguirre furious at photo leak of private text message,'' 2017.
+  [Online]. Available:
+  \url{https://politics.com.ph/aguirre-furious-photo-leak-private-text-message/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Chun2019Keep}
 C.-Y.~D. Chen, B.-Y. Lin, J.~Wang, and K.~G. Shin, ``Keep others from peeking
@@ -169,11 +169,5 @@ Z.~{Dong}, S.~{Zhang}, B.~{Ma}, D.~{Qi}, L.~{Luo}, and M.~{Zhou}, ``A hybrid
   coupled neural network and sparse coding,'' in \emph{Proceedings of the 7th
   International Conference on Information, Communication and Networks (ICICN)},
   2019.
-
-\bibitem{adaboost}
-Y.~Freund and R.~E. Schapire, ``Experiments with a new boosting algorithm,'' in
-  \emph{Proceedings of the Thirteenth International Conference on International
-  Conference on Machine Learning}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Morgan Kaufmann Publishers Inc., 1996, p. 148–156.
 
 \end{thebibliography}
