@@ -22,9 +22,9 @@ We evaluate the performance of the network model in different training and testi
 %     \label{fig:control}
 % \end{figure}
 
-In these experiments, we train and test the model with the images captured with exactly the same environment parameters, and used Peak Signal to Noise Ratio(PSNR) to evaluate the accuracy of the recovered images. The results are shown in Figure~\ref{fig-control-1} and Figure~\ref{fig-control-2}. Optical Character Recognition (OCR) services are also utilized to evaluate the accuracy. The model with traditional lens without optical zoom (hereafter referred as traditional lens) is trained and tested at 1-2 meters range, while the lens with optical zoom (hereafter referred as optical lens) at 5-7.5 meters, at which distance less than 5\% of the characters (only the simplest ones) can be recognized by humans from the photos without the assistance of SR algorithms. The PSNR and OCR results are shown in Fig. ~\ref{fig-control-1}.
+In these experiments, we train and test the model with the images captured with exactly the same environment parameters, and used Peak Signal to Noise Ratio(PSNR) to evaluate the accuracy of the recovered images. The results are shown in Figure~\ref{fig-control-1} and Figure~\ref{fig-control-2}. Optical Character Recognition (OCR) services are also utilized to evaluate the accuracy. The traditional lens group is trained and tested at 1-2 meters distance, while the optical lens, 5-7.5 meters, where less than 5\% of the characters can be read with the naked eye. The PSNR and OCR results are shown in Fig. ~\ref{fig-control-1}.
 
-This model can achieve an OCR accuracy above 90\% at 1.8m with traditional lens and at 6m with optical lens. Performances are relatively consistent in both day and night time, while increased distances mean less data and less restrictions of the possible outputs, which leads to artifacts (missing or misplaced strokes, etc.). It is the nature of Chinese characters that one mistaken stroke will largely affect its readability, leading to the result that while the pixel-wise error rises steadily with the increased distance, the accuracy will experience a drastic drop.
+This model can achieve an OCR accuracy above 90\% at 1.8m with traditional lens and at 6m with optical lens. Performances are relatively consistent in both day and night time, while increased distances mean less data, causing more artifacts(missing or misplaced strokes, etc.). It is the nature of Chinese characters that one mistaken stroke will largely affect its readability, leading to the result that while the pixel-wise error rises steadily with the increased distance, the accuracy will experience a drastic drop.
 
 \subsection{Performance In Random Environments}
 We train the model with data captured in different environments, as mentioned before, and test its ability in other environments. The results are shown in Figure~\ref{fig-random-1} and Figure~\ref{fig-random-2}. We can observe that the model performs best in daytime and at closer distances. For Figure~\ref{fig-random-1}, the model can still achieve an OCR accuracy above 85\% at 1.8m with traditional lens. From Figure~\ref{fig-random-2}, the OCR accuracy keeps higher than 90\% at 6m with optical lens. This verifies the efficiency of our model for environment adaption.
@@ -77,7 +77,9 @@ In the tradition lens group the performance of the model drops dramatically with
 \subsection{Adapting Ability}
 We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model's performance in other environments. The results are shown in Figure~\ref{fig:number_adapting}.
 
-We observed that variations in light and angle parameter in training data is crucial to a robust model. In the tradition lens group, variations in distance is not so influential to the results, given that the distances are between 1 and 2 meters. Distance changes do not have such a large impact on the size of the characters shown in the images, so that features extracted from a fixed distance might still exist when these characters vary slightly in size. However, if the network is not exposed to angled images during the training process, the rotations and deformations caused by these angles will easily disturb the feature extraction process. The optical lens group yields similar results except the distance group. As the distance between phones are increased to 6 meters, increases in distance leads to greater complexity of image blurriness and less information, so that the model becomes more sensitive to distance changes.
+We observed that variations in light and angle parameter in training data is crucial to a robust model. In the tradition lens group, the variations within 1 and 2 meters may have a smaller impact to the size of the characters
+ so that features extracted at one distance might still exist at another.
+ However, tilts and angles cause rotations and deformations and severely disturb the feature extraction process. The optical lens group yields similar results except at variations in distance. At a range of 6 meters, increases in distance leads to greater complexity of image blurriness, leading to more complex feature extraction and a more fragile model.
 % \begin{figure}[!t]
 %     \centering
 %     \subfigure[Traditional Lens]{\includegraphics[width=0.40\textwidth]{./pic/data_3.pdf}\label{fig-adapt-tranditional}}
@@ -88,7 +90,7 @@ We observed that variations in light and angle parameter in training data is cru
 % \end{figure}
 
 \subsection{Comparison with other architectures}
-We train and test other commonly used architectures with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, and applied it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution (VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.
+We train and test other widely used networks with the same sets of data and evaluate their results. We chose SRCNN, a commonly used single image SR network, applying it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution (VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.
 \begin{table}[!t]
     \centering
     \caption{Comparison with existing systems.}
@@ -108,7 +110,7 @@ We can see that the PSNR of SRPeek is 13.32dB which 73.2\% and 58.6\% larger tha
 \label{case-study}
 \subsection{Accuracy}
 
-We build the system on smartphone and evaluate its performance in real-life environments (shown in Fig.~\ref{fig-reallife}). We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels) for the attacker and a HUAWEI Mate8 smartphone for the victim. As the telephoto cameras can assist the attacker to see clearly at approximately 3m distance without any aid from SR algorithms, we believe it is insignificant to further extend this distance to judge it as a threat to privacy, so that the following experiments are performed with traditional lens at 1-2m range. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
+We build the system on smartphone and evaluate its performance in real-life scenarios (shown in Fig.~\ref{fig-reallife}). We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels, no optical zooming) for the attacker and a HUAWEI Mate8 smartphone for the victim, with the former ``1.8m daytime'' setting. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.80\linewidth]{pic/reallife.pdf}
@@ -151,11 +153,11 @@ We also ask participants to hold a smartphone in their hands and read a piece of
     \label{table-tremor}
 \end{table}
 
-We can see that with the existence of tremors, the recognition accuracy drops from 95\% to 85\%/80\% for both OCR tools and human. We conclude from the results that hand tremors can impact the performance of our system. Although the edges of the phone are notable marks for image alignment, small shifts in the sub-pixel level will cause blurriness in the results of the networks, lowering the readability of the outputs. 
+We can see that with the existence of tremors, the recognition accuracy drops from 95\% to 85\%/80\% for both OCR tools and human. We conclude from the results that hand tremors can impact the performance of our system. Hand tremors can cause motion blur and erratic shifts in the sub-pixel level(after image alignment phase) and impact performance.
 
 
 \subsection{Success rate in different tasks}
-We test the success rate of obtaining crucial information when the observed participant performs several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters. The observed participant will turn off the screen of his phone as soon as he/she finishes the task, while the observing participant will observe through our APP, constantly capturing images and processing them to display a real-time and magnified view of the observed phone. For the first two tasks, we ask the observing participant several questions to test if he/she have collected the vital information (e.g. the name or the location mentioned in the text). For the task of recognizing PIN and passwords, we use accuracy per character as a supplementary evaluation metric. In these two scenarios, we ignore the virtual keyboard and view only the textbox, assuming that the last character of the entered string is always visible. Fewer photos will be available for each character but deciphering English characters is also easier than Chinese characters, and we trained a model specifically for each task (with the same neural network architecture), the training images containing only English characters and numbers (or only numbers for the PIN entry scenario). The results are shown in Table~\ref{table-task}.
+We test the success rate of obtaining crucial information when the observed participant performs several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters(typing at 2 characters per second). We use accuracy per character as evaluation metric. In the PIN and password tasks, fewer photos will be available, but deciphering English characters is also easier than Chinese characters, and we use specifically trained models(with same structure and different training data). The results are shown in Table~\ref{table-task}.
 
 \begin{table}[!t]
 \centering
@@ -170,10 +172,10 @@ SRPeek & 100\% & 100\% & 100\% & 80\%\\ \bottomrule
 
 \end{table}
 
-We prove from this experiment that our system functions normally in everyday scenarios and poses a threat to screen privacy.
+We conclude that \textsf{SRPeek} functions normally in everyday scenarios and poses a threat to screen privacy.
 
 \subsection{Perceived shoulder surfing susceptibility}
-We ask the observed participant to rate the perceived shoulder-surfing susceptibility in these scenarios. The attacker will be sitting or standing behind the participant at 1.8m range, pretending to be interacting with their own phone while continuously running the shoulder-surfing APP. None of the participants were alerted by the attacker's behavior and reported suspicion of shoulder-surfing. We believe that our system can enable a malicious attacker to gather large amounts of critical information from the victim while remaining unnoticed.
+We ask the participants to rate the perceived shoulder-surfing susceptibility after the experiment. The attacker sits or stands at 1.8m range, pretending to be interacting with their own phone while continuously running the shoulder-surfing APP. None of the participants reported suspicion of shoulder-surfing. We believe that our system can enable a malicious attacker to gather large amounts of critical information from the victim while remaining unnoticed.
 
 
 
