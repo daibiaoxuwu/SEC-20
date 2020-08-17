@@ -10,18 +10,18 @@ Latest models of smartphones can capture images at 10 frames per second in burst
 \vspace{1mm}
 \noindent
 \textbf{Processing Ability}
-To achieve best performance the user needs a phone with strong processing capabilities to run the neural network at real time. As neural networks have been common place in numerous modern APPs, most phones of the latest generation have upgraded their processing ability to run neural networks, but older versions might not possess such processing powers and cannot process images at real-time.
+To achieve best performance the user needs a phone with strong processing capabilities to run the neural network in real-time. As neural networks have been commonplace in numerous modern APPs, most phones of the latest generation have upgraded their processing ability to run neural networks, but older versions might not possess such processing powers and cannot process images in real-time.
 
 \vspace{1mm}
 \noindent
 \textbf{Motion and Tremors}
-In our experiment we assume the observed user will hold still his/her phone, and not making interactions too often. There might be extreme cases where frequent tilting of the screen may cause severe motion blur, degrading the result.
+We assume the observed user will hold still his/her phone, and not making interactions too often. There might be extreme cases where frequent tilting of the screen may cause severe motion blur, degrading the result.
 
 Although \textsf{SRPeek} proves to be highly efficient against unprotected screens, there are some simple methods to mitigate this unique threat while not cumbering the user.
 
 \vspace{1mm}
 \noindent
-\textbf{Dynamic background.} Most multi-frame SR algorithms are designed based on the assumption that all input images are reflections of the same scene, and ours is not an exception. By deploying a dynamic background behind the characters, such as tiny dots and lines travelling slowly around the screen, we can construct a constantly changing scene that will confuse the multi-frame SR algorithms, and due to the blurriness of the images, these influential elements cannot be easily removed. These dots do not need to be distinct or colored same as the texts, as multi-frame SR algorithms function with tiny, pixel level differences between frames, making them especially sensitive to microscopic changes.
+\textbf{Dynamic background.} Most multi-frame SR algorithms are designed based on the assumption that all input images are reflections of the same scene, and ours is not an exception. By deploying a dynamic background behind the characters, such as tiny dots and lines traveling slowly around the screen, we can construct a constantly changing scene that will confuse the multi-frame SR algorithms, and due to the blurriness of the images, these influential elements cannot be easily removed. These dots do not need to be distinct or colored the same as the texts, as multi-frame SR algorithms function with tiny, pixel level differences between frames, making them especially sensitive to microscopic changes.
 
 \vspace{1mm}
 \noindent
@@ -29,5 +29,5 @@ Although \textsf{SRPeek} proves to be highly efficient against unprotected scree
 
 \vspace{1mm}
 \noindent
-\textbf{Adversarial machine learning methods.} In recent years we have discovered the weaknesses of neural networks and that inserting certain microscopic changes, undetectable to the human eye, to the pixels of an image will make it look different to a neural network. These methods fool the feature extraction phases of neural networks, so that SRPeek is also vulnerable to this attack. Theoretically, by exerting a pattern to the victim's screen, it can be captured by the attacker's camera and confuse its SR algorithms, but these remains to be implemented in our future work.
+\textbf{Adversarial machine learning methods.} In recent years we have discovered the weaknesses of neural networks and that inserting certain microscopic changes, undetectable to the human eye, to the pixels of an image will make it look different to a neural network. These methods fool the feature extraction phases of neural networks, so that SRPeek is also vulnerable to this attack. Theoretically, by exerting a pattern to the victim's screen, it can be captured by the attacker's camera and confuse its SR algorithms, but these remain to be implemented in our future work.
 

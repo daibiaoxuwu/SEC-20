@@ -4,7 +4,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \vspace{1mm}
 \noindent
-\textbf{Input:} Under guidance of the attacker, The smartphone will zoom in, take focus, and take several images(the number is freely adjustable) with burst mode of the target screen. As digital zooming do not put in any extra data, we'll only use maximum optical zooming(if exist) when photographing to reduce the workload of neural networks.
+\textbf{Input:} Under the guidance of the attacker, The smartphone will zoom in, take focus, and take several images(the number is freely adjustable) with burst mode of the target screen. As digital zooming does not put in any extra data, we'll only use maximum optical zooming(if exist) when photographing to reduce the workload of neural networks.
 
 \vspace{1mm}
 \noindent
@@ -17,7 +17,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \vspace{1mm}
 \noindent
-\textbf{Processing:} As our SR network accepts only 9$\times$9 patches, we will process all the 9$\times$9 patches (with overlapping) among the input photo to generate 36$\times$36 images (4$\times$ upscaling). The input is RGB colored, while the output, as we are not interested in color, is black and white. The three calculation processes (Alignment, Adjustment, Processing) run parallel to the input process, so that the attacker can process a batch of images while the next batch is being collected simultaneously.
+\textbf{Processing:} As our SR network accepts only 9$\times$9 patches, we will process all the 9$\times$9 patches (with overlapping) among the input photo to generate 36$\times$36 images (4$\times$ upscaling). The input is RGB colored, while the output, as we are not interested in color, is black and white. The three calculation processes (Alignment, Adjustment, Processing) run parallel to the input process so that the attacker can process a batch of images while the next batch is being collected simultaneously.
 		
 \vspace{1mm}
 \noindent
