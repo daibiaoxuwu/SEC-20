@@ -10,7 +10,7 @@
 %     \caption{Performance in Controlled Environment (a,b) and Random Environment (c,d).}
 %     \label{fig-performance-1}
 % \end{figure*}
-We perform the following experiments with two commercial off-the-shelf(COTS) smartphones: a Redmi 6A smartphone, with a single rear camera with 13 million pixels and digital zoom only, and a HUAWEI P40 Pro, with multiple rear cameras. The telephoto camera possesses up to 5$\times$ optical zooming ability which we will utilize fully in our experiments. The Peak Signal to Noise Ratio(PSNR) metric and Optical Character Recognition (OCR) services are used to evaluate the accuracy of our system.
+We perform the following experiments with two commercial off-the-shelf(COTS) smartphones: a Redmi 6A smartphone, with a single rear camera with 13 million pixels and digital zoom only, and a HUAWEI P40 Pro, with multiple rear cameras. The telephoto camera possesses up to 5$\times$ optical zooming ability which we will utilize fully in our experiments. The Peak Signal to Noise Ratio(PSNR) metric and Optical Character Recognition (OCR) services are used to evaluate the accuracy of our system(the latter using accuracy per character).
  
 \subsection{Performance In Controlled Environments}
 % \begin{figure}[!t]
@@ -51,7 +51,7 @@ We train the model with data captured with varying environmental parameters and 
 
 
 \subsection{Performance with Fewer Available Images}
-As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, which is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry. The previous experiments are all conducted with the ideal 20 frames per burst, but in the case study at Sec.~\ref{case-study} and real-life scenarios the attacker only gets to photograph when the screen display remains constant, so there might be fewer images available. We evaluated the impact of fewer available images on the performance of the SR model. The results are shown in fig.~\ref{fig:number_adapting}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
+As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, which is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry. The previous experiments are all conducted with the ideal 20 frames per burst, but in the case study at Sec.~\ref{case-study} and real-life scenarios the attacker only gets to photograph when the screen display remains constant, so there might be fewer images available. We evaluated the impact of fewer available images on the performance of the SR model. The results are shown in fig.~\ref{fig-image-tranditional-2} and fig.~\ref{fig-image-optical-2}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
 
 In the traditional lens group, the performance of the model drops dramatically with fewer than 10 images, indicating that not enough input information is available to rule out all possibilities of the displayed characters. The optical lens group displayed a steady descent of accuracy when fewer images are available, which is expected, as the blur patterns are more complex and the differences between frames more pronounced, so that the images are more precious to the model and contain less overlapping data, and removing any of them will cause losses in accuracy.
 \begin{figure*}[!t]
@@ -75,7 +75,7 @@ In the traditional lens group, the performance of the model drops dramatically w
 % \end{figure}
 
 \subsection{Adapting Ability}
-We train the model with fewer groups of data, exposing it to fewer variations of a certain environment parameter when training, and examine the model's performance in random environments. The results are shown in Figure~\ref{fig:number_adapting}.
+We train the model with fewer groups of data, exposing it to fewer variations of a certain environment parameter when training, and examine the model's performance in random environments. The results are shown in fig.~\ref{fig-adapt-tranditional} and fig.~\ref{fig-adapt-optical}.
 
 We observed that variations in light and angle parameter in training data are crucial to a robust model. In the traditional lens group, the variations within 1 and 2 meters may have a smaller impact on the size of the characters
  so that features extracted at one distance might still exist at another.

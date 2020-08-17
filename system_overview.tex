@@ -13,7 +13,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 
 \vspace{1mm}
 \noindent
-\textbf{Adjustment:} The lines of text(or stuff differing from the background color of the screen) will be carved out for processing to reduce the workload of the network. The character size is normally 10 to 20 pixels, while variations in size aren't influential as they're covered in the training data, so zooming isn't necessary.
+\textbf{Adjustment:} The patches differing from the background color of the screen will be carved out for processing to reduce the workload of the network. The character size is normally 10 to 20 pixels, while variations in size aren't influential as they're covered in the training data, so zooming isn't necessary.
 
 \vspace{1mm}
 \noindent
@@ -23,7 +23,7 @@ We implemented a holistic system for shoulder surfing, with the neural network a
 \noindent
 \textbf{Output:} The outputs of our SR network, the 36$\times$36 overlapping patches, are then rearranged to their original locations and merged (using average values) into a single image. As we only carve out the texts for processing, we will then insert these high-res texts back to their original locations on one of the input images, and display the patched image to the attacker (An illustration of the patched image can be found in Fig.~\ref{illustration_of_system}).
 
-These steps are repeatedly executed to enable the attacker to monitor the victim at an interval of 1 to 2 seconds. At critical times requiring continuous monitoring so as not to miss transient display, e.g. password entering, the system can simply lengthen the input phase across that period and process the data later. The workflow of our system is shown in Figure~\ref{fig-workflow}.
+These steps are repeatedly executed to enable the attacker to monitor the victim at an interval of 1 to 2 seconds. If continuous monitoring is required to avoid missing the transient display, e.g. password entering, the system can simply lengthen the input phase across that period and process the data later. The workflow of our system is shown in Figure~\ref{fig-workflow}.
 \begin{figure}
   \centering
      \includegraphics[width=0.90\linewidth]{./pic/workflow_cl.pdf}
