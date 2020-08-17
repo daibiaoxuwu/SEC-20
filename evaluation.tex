@@ -27,7 +27,7 @@ In these experiments, we train and test the model with the images captured with 
 This model can achieve an OCR accuracy above 90\% at 1.8m with traditional lens and at 6m with optical lens. Performances are relatively consistent in both day and night time, while increased distances mean less data, causing more artifacts(missing or misplaced strokes, etc.). It is the nature of Chinese characters that one mistaken stroke will largely affect its readability, leading to the result that while the pixel-wise error rises steadily with the increased distance, the accuracy will experience a drastic drop.
 
 \subsection{Performance In Random Environments}
-We train the model with data captured with varying environmental parameters, and test its ability at a new environment setting. The results are shown in Figure~\ref{fig-random-1} and ~\ref{fig-random-2}. The model can achieve an OCR accuracy above 85\% at 1.8m with traditional lens, and above 90\% at 6m with optical lens. This verifies the efficiency of our model for environment adaption.
+We train the model with data captured with varying environmental parameters and test its ability at a new environment setting. The results are shown in Figure~\ref{fig-random-1} and ~\ref{fig-random-2}. The model can achieve an OCR accuracy above 85\% at 1.8m with traditional lens, and above 90\% at 6m with optical lens. This verifies the efficiency of our model for environment adaption.
 
 % \begin{figure}[!t]
 %     \centering
@@ -50,8 +50,8 @@ We train the model with data captured with varying environmental parameters, and
 \end{figure*}
 
 
-\subsection{Performance with fewer available images}
-As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, which is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry. The previous experiments are all conducted with the ideal 20 frames per burst, but in the case study at Sec.~\ref{case-study} and real-life scenarios the attacker only gets to photograph when the screen display remains constant, so there might be fewer images available. We evaluated the impact of fewer available images to the performance of the SR model. The results are shown in fig.~\ref{fig:number_adapting}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
+\subsection{Performance with Fewer Available Images}
+As mentioned in sec.~\ref{sec-design}, our model is designed to work on any number of input images, which is requisite because in certain scenarios the data displayed on the victim's screen is transient and ever-changing, e.g. password entry. The previous experiments are all conducted with the ideal 20 frames per burst, but in the case study at Sec.~\ref{case-study} and real-life scenarios the attacker only gets to photograph when the screen display remains constant, so there might be fewer images available. We evaluated the impact of fewer available images on the performance of the SR model. The results are shown in fig.~\ref{fig:number_adapting}. We tested at the 1.8m daytime scenario for traditional lens and 6m daytime scenario for optical lens.
 
 In the traditional lens group, the performance of the model drops dramatically with fewer than 10 images, indicating that not enough input information is available to rule out all possibilities of the displayed characters. The optical lens group displayed a steady descent of accuracy when fewer images are available, which is expected, as the blur patterns are more complex and the differences between frames more pronounced, so that the images are more precious to the model and contain less overlapping data, and removing any of them will cause losses in accuracy.
 \begin{figure*}[!t]
@@ -75,11 +75,11 @@ In the traditional lens group, the performance of the model drops dramatically w
 % \end{figure}
 
 \subsection{Adapting Ability}
-We train the model with fewer groups of data, exposing it to fewer variations of environment parameters, and examine the model's performance in other environments. The results are shown in Figure~\ref{fig:number_adapting}.
+We train the model with fewer groups of data, exposing it to fewer variations of a certain environment parameter when training, and examine the model's performance in random environments. The results are shown in Figure~\ref{fig:number_adapting}.
 
-We observed that variations in light and angle parameter in training data is crucial to a robust model. In the traditional lens group, the variations within 1 and 2 meters may have a smaller impact on the size of the characters
+We observed that variations in light and angle parameter in training data are crucial to a robust model. In the traditional lens group, the variations within 1 and 2 meters may have a smaller impact on the size of the characters
  so that features extracted at one distance might still exist at another.
- However, tilts and angles cause rotations and deformations and severely disturb the feature extraction process. The optical lens group yields similar results except at variations in distance. At a range of 6 meters, increases in distance lead to greater complexity of image blurriness, leading to more complex feature extraction and a more fragile model.
+ However, tilts and angles of the screen cause rotations and deformations and severely disturb the feature extraction process. The optical lens group yields similar results except at variations in distance. At a range of 6 meters, increases in distance lead to greater complexity of image blurriness, leading to more complex feature extraction and a more fragile model.
 % \begin{figure}[!t]
 %     \centering
 %     \subfigure[Traditional Lens]{\includegraphics[width=0.40\textwidth]{./pic/data_3.pdf}\label{fig-adapt-tranditional}}
@@ -89,8 +89,8 @@ We observed that variations in light and angle parameter in training data is cru
 %     \label{fig:adapting}
 % \end{figure}
 
-\subsection{Comparison with other architectures}
-We train and test other widely used networks with the same sets of data and evaluate their results. We chose SRCNN~\cite{dong2015image}, a commonly used single image SR network, applying it to each single image before merging the results by pixel-level average. We also used a multi-frame version of CNN consisting of 3D convolutional layers, designed for video super resolution (VideoSR~\cite{kappeler2016video}). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.
+\subsection{Comparison with Other Architectures}
+We train and test other widely used networks with the same sets of data and evaluate their results. We chose SRCNN~\cite{dong2015image}, a commonly used single image SR network, applying it to every single image before merging the results by pixel-level average. We also used a multi-frame version of CNN with 3D convolutions, originally designed for video super resolution~\cite{kappeler2016video} (VideoSR). However, as mentioned above, it is very difficult for the single image approaches to utilize information and distinguish the noisy and deformed patterns, while VideoSR approaches rely upon consistency between frames, so they fail to give satisfactory results. We used the relatively easy 'daytime 1.2m-distance direct with traditional lens' group of data for testing. The results are shown in Table~\ref{table-comp}.
 \begin{table}[!t]
     \centering
     \caption{Comparison with existing systems.}
@@ -110,7 +110,7 @@ We can see that the PSNR of SRPeek is 13.32dB which 73.2\% and 58.6\% larger tha
 \label{case-study}
 \subsection{Accuracy}
 
-We build the system on smartphone and evaluate its performance in real-life scenarios (shown in Fig.~\ref{fig-reallife}). We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels, no optical zooming) for the attacker and a HUAWEI Mate8 smartphone for the victim, with the former ``1.8m daytime'' setting. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
+We build the system on smartphones and evaluate its performance in real-life scenarios (shown in Fig.~\ref{fig-reallife}). We experiment with a Redmi 6A smartphone (with a camera of 13 million pixels, no optical zooming) for the attacker and a HUAWEI Mate8 smartphone for the victim, with the former ``1.8m daytime'' setting. We ask 5 human participants to read the reconstructed characters to evaluate the usability of our model. No participants can read the unprocessed images, but all of them can decipher the information on the reconstructed image without much difficulty. The results are shown in Table~\ref{table-scenarios}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.80\linewidth]{pic/reallife.pdf}
@@ -118,7 +118,7 @@ We build the system on smartphone and evaluate its performance in real-life scen
 	\label{fig-reallife}
 \end{figure}
 
-The results show that humans can read 95\%, 85\% and 70\% contents in home, transport, and theater while the OCR accuracy is 100\%, 10\% and 23\%. That verifies that humans can obtain the most parts of information from the peeking in various environments. In transport, the vibration of smartphone and the darker environment can fool the OCR model for content recognition in comparison with human recognition so that leads to lower accuracy in transport and theater.
+The results show that humans can read 95\%, 85\%, and 70\% contents at home, transport, and theater while the OCR accuracy is 100\%, 10\%, and 23\%. That verifies that humans can obtain the most parts of information from the peeking in various environments. In transport, the vibration of smartphone and the darker environment can fool the OCR model for content recognition in comparison with human recognition so that leads to lower accuracy in transport and theater.
 
 \begin{table}[!t]
     \centering
@@ -134,8 +134,8 @@ The results show that humans can read 95\%, 85\% and 70\% contents in home, tran
     \label{table-scenarios}
 \end{table}
 
-\subsection{Influence of hand tremors}
-We ask 5 participants to capture images with handheld smartphones, keeping their hand still to their greatest effort (Handheld camera). We process these images and let them read the results. We compare this performance to the data collected on stationary phones to evaluate the influence of hand tremors.
+\subsection{Influence of Hand Tremors}
+We ask 5 participants to capture images with handheld smartphones, keeping their hands still to their greatest effort (Handheld camera). We process these images and let them read the results. We compare this performance to the data collected on stationary phones to evaluate the influence of hand tremors.
 We also ask participants to hold a smartphone in their hands and read a piece of text, without other additional instructions (Handheld target). The user may freely interact with the phone when reading. We capture images of the phone at the same time to see how our system deals with a moving target screen. The results are shown in Table~\ref{table-tremor}.
 
 \begin{table}[!t] 
@@ -153,11 +153,11 @@ We also ask participants to hold a smartphone in their hands and read a piece of
     \label{table-tremor}
 \end{table}
 
-We can see that with the existence of tremors, the recognition accuracy drops from 95\% to 85\%/80\% for both OCR tools and human. We conclude from the results that hand tremors can impact the performance of our system. Hand tremors can cause motion blur and erratic shifts in the sub-pixel level(after image alignment phase) and impact performance.
+We can see that with the existence of tremors, the recognition accuracy drops from 95\% to 85\%/80\% for both OCR tools and humans. We conclude from the results that hand tremors can impact the performance of our system. Hand tremors can cause motion blur and erratic shifts in the sub-pixel level(after image alignment phase) and impact performance.
 
 
 \subsection{Success rate in different tasks}
-We test the success rate of obtaining crucial information when the observed participant performs several tasks on a phone: reading text message, typing text message, entering PIN, and typing password with numbers, English and special characters(typing at 2 characters per second). We use accuracy per character as the evaluation metric. In the PIN and password tasks, fewer photos will be available, but deciphering English characters is also easier than Chinese characters, and we use specifically trained models(with the same structure and different training data). The results are shown in Table~\ref{table-task}.
+We test the success rate of obtaining crucial information when the observed participant performs several tasks on a phone: reading text messages, typing text messages, entering PIN, and typing passwords with numbers, English, and special characters(typing at 2 characters per second). We use accuracy per character as the evaluation metric. In the PIN and password tasks, fewer photos will be available, but deciphering English characters is also easier than Chinese characters, and we use specifically trained models(with the same structure and different training data). The results are shown in Table~\ref{table-task}.
 
 \begin{table}[!t]
 \centering
