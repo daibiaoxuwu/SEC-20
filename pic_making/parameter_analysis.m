@@ -154,149 +154,149 @@ set(fig,'PaperSize',[7.5 3.8]);
 % set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
 % saveas(gcf,"../pic/data_2_2.pdf")
 % data_3
-x=[1,2,3,4];
-psnr=[13.32,9.15,9.94,8.85];
-ocr_acc=[100,73,80,52];
-
-yyaxis left
-b=bar(x,psnr,'FaceColor',left_color);
-% b.CData=lineB(1);
-ylabel('PSNR(db)'); % y label
-ylim([0 25])
-
-yyaxis right
-h=plot(x,ocr_acc);
-h.LineStyle=lineA(2);
-h.Color=right_color;
-h.Marker=lineC(2);
-h.LineWidth=2;
-ylabel('OCR Accuracy(%)'); % y label
-ylim([50 100])
-
-% legend(['Toward (-1)'],['Static (0)'])
-xlabel('Different Parameters'); % x label
-xticklabels({'All','Light','Distance','Angle'})
-% xlim([0 5])
-title('')
-%adjust the ratio
-set(gcf,'WindowStyle','normal','Position', [200,200,700,360]);
-saveas(gcf,"../pic/data_3.pdf")
-
-% data_4
-x=[1,2,3,4];
-psnr=[12.23,11.72,10.3,9.57];
-ocr_acc=[92,81,59,34];
-
-yyaxis left
-b=bar(x,psnr,'FaceColor',left_color);
-% b.CData=lineB(1);
-ylabel('PSNR(db)'); % y label
-ylim([0 25])
-
-yyaxis right
-h=plot(x,ocr_acc);
-h.LineStyle=lineA(2);
-h.Color=right_color;
-h.Marker=lineC(2);
-h.LineWidth=2;
-ylabel('OCR Accuracy(%)'); % y label
-ylim([20 100])
-
-% legend(['Toward (-1)'],['Static (0)'])
-xlabel('Different Parameters'); % x label
-xticklabels({'All','Light','Distance','Angle'})
-% xlim([0 5])
-title('')
-%adjust the ratio
-set(gcf,'WindowStyle','normal','Position', [200,200,700,360]);
-saveas(gcf,"../pic/data_4.pdf")
+% x=[1,2,3,4];
+% psnr=[13.32,9.15,9.94,8.85];
+% ocr_acc=[100,73,80,52];
+% 
+% yyaxis left
+% b=bar(x,psnr,'FaceColor',left_color);
+% % b.CData=lineB(1);
+% ylabel('PSNR(db)'); % y label
+% ylim([0 25])
+% 
+% yyaxis right
+% h=plot(x,ocr_acc);
+% h.LineStyle=lineA(2);
+% h.Color=right_color;
+% h.Marker=lineC(2);
+% h.LineWidth=2;
+% ylabel('OCR Accuracy(%)'); % y label
+% ylim([50 100])
+% 
+% % legend(['Toward (-1)'],['Static (0)'])
+% xlabel('Different Parameters'); % x label
+% xticklabels({'All','Light','Distance','Angle'})
+% % xlim([0 5])
+% title('')
+% %adjust the ratio
+% set(gcf,'WindowStyle','normal','Position', [200,200,700,360]);
+% saveas(gcf,"../pic/data_3.pdf")
+% 
+% % data_4
+% x=[1,2,3,4];
+% psnr=[12.23,11.72,10.3,9.57];
+% ocr_acc=[92,81,59,34];
+% 
+% yyaxis left
+% b=bar(x,psnr,'FaceColor',left_color);
+% % b.CData=lineB(1);
+% ylabel('PSNR(db)'); % y label
+% ylim([0 25])
+% 
+% yyaxis right
+% h=plot(x,ocr_acc);
+% h.LineStyle=lineA(2);
+% h.Color=right_color;
+% h.Marker=lineC(2);
+% h.LineWidth=2;
+% ylabel('OCR Accuracy(%)'); % y label
+% ylim([20 100])
+% 
+% % legend(['Toward (-1)'],['Static (0)'])
+% xlabel('Different Parameters'); % x label
+% xticklabels({'All','Light','Distance','Angle'})
+% % xlim([0 5])
+% title('')
+% %adjust the ratio
+% set(gcf,'WindowStyle','normal','Position', [200,200,700,360]);
+% saveas(gcf,"../pic/data_4.pdf")
 
 %% data_5
-% x=[1,2,3,4,5];
-% psnr=[13.32,12.91,11.17,9.1,8.42];
-% ocr_acc=[100,95,76,31,14];
-% 
-% yyaxis left
-% b=bar(x,psnr,'FaceColor',left_color);
-% % b.CData=lineB(1);
-% ylabel('PSNR(db)'); % y label
-% ylim([0 20])
-% 
-% yyaxis right
-% h=plot(x,ocr_acc);
-% h.LineStyle=lineA(2);
-% h.Color=right_color;
-% h.Marker=lineC(2);
-% h.LineWidth=2;
-% ylabel('OCR Accuracy(%)'); % y label
-% ylim([0 100])
-% 
-% % legend(['Toward (-1)'],['Static (0)'])
-% xlabel('Different Numbers of Images'); % x label
-% xticklabels({'20','15','10','6','3'})
-% % xlim([0 5])
-% title('')
-% %adjust the ratio
-% set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
-% saveas(gcf,"../pic/data_5.pdf")
+x=[1,2,3,4,5];
+psnr=[13.32,12.91,11.17,9.1,8.42];
+ocr_acc=[100,95,76,31,14];
 
-%% data_6
-% x=[1,2,3,4,5];
-% psnr=[12.23,11.34,10.8,10.2,9.18];
-% ocr_acc=[92,86,69,51,24];
-% 
-% yyaxis left
-% b=bar(x,psnr,'FaceColor',left_color);
-% % b.CData=lineB(1);
-% ylabel('PSNR(db)'); % y label
-% ylim([0 20])
-% 
-% yyaxis right
-% h=plot(x,ocr_acc);
-% h.LineStyle=lineA(2);
-% h.Color=right_color;
-% h.Marker=lineC(2);
-% h.LineWidth=2;
-% ylabel('OCR Accuracy(%)'); % y label
-% ylim([0 100])
-% 
-% % legend(['Toward (-1)'],['Static (0)'])
-% xlabel('Different Numbers of Images'); % x label
-% xticklabels({'20','15','10','6','3'})
-% % xlim([0 5])
-% title('')
-% %adjust the ratio
-% set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
-% saveas(gcf,"../pic/data_6.pdf")
+yyaxis left
+b=bar(x,psnr,'FaceColor',left_color);
+% b.CData=lineB(1);
+ylabel('PSNR(db)'); % y label
+ylim([0 25])
 
-%% data_7
-x=[1,2,3];
-human_acc_processed=[95,85,70];
-ocr_acc=[100,10,23];
-human_acc_raw=[5,0.1,0.1];
-
-h=plot(x,human_acc_processed);
-h.LineStyle=lineA(1);
-h.Color=left_color;
-h.Marker=lineC(1);
-h.LineWidth=2;
-
-hold on;
+yyaxis right
 h=plot(x,ocr_acc);
 h.LineStyle=lineA(2);
 h.Color=right_color;
 h.Marker=lineC(2);
 h.LineWidth=2;
+ylabel('OCR Accuracy(%)'); % y label
+ylim([0 100])
 
-hold on;
-b=bar(x,human_acc_raw,'FaceColor','g');
-
-ylabel('Recognition Accuracy(%)'); % y label
 % legend(['Toward (-1)'],['Static (0)'])
-xlabel('Different Scenarios'); % x label
-xticklabels({'Home','Transport','Theater'})
+xlabel('Different Numbers of Images'); % x label
+xticklabels({'20','15','10','6','3'})
 % xlim([0 5])
 title('')
 %adjust the ratio
 set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
-saveas(gcf,"../pic/data_7.pdf")
+saveas(gcf,"./pic/data_5.pdf")
+
+%% data_6
+x=[1,2,3,4,5];
+psnr=[12.23,11.34,10.8,10.2,9.18];
+ocr_acc=[92,86,69,51,24];
+
+yyaxis left
+b=bar(x,psnr,'FaceColor',left_color);
+% b.CData=lineB(1);
+ylabel('PSNR(db)'); % y label
+ylim([0 25])
+
+yyaxis right
+h=plot(x,ocr_acc);
+h.LineStyle=lineA(2);
+h.Color=right_color;
+h.Marker=lineC(2);
+h.LineWidth=2;
+ylabel('OCR Accuracy(%)'); % y label
+ylim([0 100])
+
+% legend(['Toward (-1)'],['Static (0)'])
+xlabel('Different Numbers of Images'); % x label
+xticklabels({'20','15','10','6','3'})
+% xlim([0 5])
+title('')
+%adjust the ratio
+set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
+saveas(gcf,"./pic/data_6.pdf")
+
+%% data_7
+% x=[1,2,3];
+% human_acc_processed=[95,85,70];
+% ocr_acc=[100,10,23];
+% human_acc_raw=[5,0.1,0.1];
+% 
+% h=plot(x,human_acc_processed);
+% h.LineStyle=lineA(1);
+% h.Color=left_color;
+% h.Marker=lineC(1);
+% h.LineWidth=2;
+% 
+% hold on;
+% h=plot(x,ocr_acc);
+% h.LineStyle=lineA(2);
+% h.Color=right_color;
+% h.Marker=lineC(2);
+% h.LineWidth=2;
+% 
+% hold on;
+% b=bar(x,human_acc_raw,'FaceColor','g');
+% 
+% ylabel('Recognition Accuracy(%)'); % y label
+% % legend(['Toward (-1)'],['Static (0)'])
+% xlabel('Different Scenarios'); % x label
+% xticklabels({'Home','Transport','Theater'})
+% % xlim([0 5])
+% title('')
+% %adjust the ratio
+% set(gcf,'WindowStyle','normal','Position', [200,200,640,360]);
+% saveas(gcf,"../pic/data_7.pdf")
